@@ -13,10 +13,8 @@
         <link rel="canonical" href="https://jwkruisselbrink.github.io/fair-pbk/about/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../specification/">
       
-      
-        <link rel="next" href="../specification/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -208,6 +206,25 @@
   
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../specification/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Specification
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
     
   
   
@@ -219,25 +236,6 @@
     
   
   About
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../specification/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Specification
 
       </a>
     </li>
@@ -323,6 +321,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../specification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -376,6 +396,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tools" class="md-nav__link">
     <span class="md-ellipsis">
       Tools
@@ -397,28 +426,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../specification/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Specification
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -450,6 +457,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#tools" class="md-nav__link">
@@ -493,9 +509,9 @@
 <h1 id="about">About</h1>
 <p>This FAIR PBK standard is currently being developed in an explorative manner to evaluate how to obtain a truly harmonised and interoperable exchange format for models, and to develop and test a strategy/standard for annotation of terms and units specifically for PBK models. The aim is to adopt and/or align with already existing initiatives as much as possible. </p>
 <p>At present, the following resources are considered essential for building up a standard for FAIR PBK modelling:</p>
+<h2 id="resources">Resources</h2>
 <ul>
 <li><strong><a href="https://sbml.org/">SBML</a>:</strong> Use of the <a href="https://sbml.org/">Systems Biology Markup Language (SBML)</a> as a harmonized publication and exchange format for PBK models, which should bridge the gap between the various different model implementation languages that are currently used by PBK model developers.</li>
-<li>For (semantic) annotation of PBK models, the controlled vocabularies of the following ontologies are considered relevant:</li>
 <li><strong><a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a>:</strong> Use of the (currently being developed) <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a> for annotation of all model elements (e.g., compartments, species, parameters).</li>
 <li><strong><a href="https://www.ebi.ac.uk/chebi/">ChEBI</a>:</strong> Use of the <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> ontology for chemical identifiers to relate PBK model substance applicability domain, chemical species, and chemical-specific parameters to chemicals.</li>
 <li><strong><a href="https://www.ncbi.nlm.nih.gov/taxonomy">NCBI Taxonomy Database</a>:</strong> Use of the <a href="https://www.ncbi.nlm.nih.gov/taxonomy">NCBI Taxonomy Database</a> to link the model applicability domain to controlled terminology for animal species.</li>
@@ -510,7 +526,7 @@
 <li><strong><a href="https://github.com/jwkruisselbrink/sbml-pbk-utils">SBML PBK Utils</a>:</strong> A small Python package that contains utility functions for FAIR PBK model implementation in SBML. It provides a number of utility functions and classes for annotating, validating and running SBML PBK models.</li>
 </ul>
 <h2 id="generic-tools">Generic tools</h2>
-<p>The tools below are not specific to the FAIR PBK standard, but are more generic tools for, e.g. working with SBML:</p>
+<p>The tools below are not specific to the FAIR PBK standard, but are more generic tools for the development of FAIR PBK models:</p>
 <ul>
 <li><strong><a href="https://github.com/matthiaskoenig/sbmlutils">SBMLutils</a>:</strong> This python package provides convenient utilities for manipulation and annotation of SBML models. It also serves as a major source of inspiration of the <a href="https://github.com/jwkruisselbrink/sbml-pbk-utils">SBML PBK Utils</a> package, which is tailored to the sub-domain of PBK models.</li>
 <li><strong><a href="https://github.com/sbmlteam/python-libsbml">libSBML</a>:</strong> This python package provides the essential functionality for manipulating SBML models in python. For instance, for enriching SBML model implementations with annotations, units and descriptions of the model elements.</li>
