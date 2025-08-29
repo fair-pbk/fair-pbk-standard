@@ -6,7 +6,7 @@ hide:
 
 # About
 
-This FAIR PBK standard is currently being developed in an explorative manner to evaluate how to obtain a truly harmonised and interoperable exchange format for models, and to develop and test a strategy/standard for annotation of terms and units specifically for PBK models. The aim is to adopt and/or align with already existing initiatives as much as possible. 
+This FAIR PBK standard is currently being developed in an explorative manner to evaluate how to obtain a truly harmonised and interoperable exchange format for models, and to develop and test a strategy/standard for annotation of terms and units specifically for PBK models. The aim is to adopt and/or align with already existing initiatives as much as possible.
 
 At present, the following resources are considered essential for building up a standard for FAIR PBK modelling:
 

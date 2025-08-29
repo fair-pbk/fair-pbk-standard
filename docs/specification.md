@@ -8,11 +8,12 @@ hide:
 ## File format
 
 - **F01:** PBK model implementations should be published in *xml* file format using the [Systems Biology Markup Language (SBML)](https://sbml.org/) level 3 version 2 or higher.
-- **F02:** The SBML file should be properly annotated using the therefore available [annotation scheme](https://sbml.org/documents/elaborations/miriam_annotation_syntax/).
+- **F02:** The model and model elements described by the SBML file should be annotated using the therefore available [annotation scheme](https://sbml.org/documents/elaborations/miriam_annotation_syntax/).
+- **F03:** The units of the model and model elements described by the SBML file should specified using the therefore available system for unit definitions.
 
 ## General
 
-- **G01:** The PBK model implementation should NOT contain parameters specifying the dosing. These should be added via events in model simulations.
+- **G01:** The PBK model implementation should **NOT** contain parameters specifying the dosing. These should be added via events in model simulations.
 
 ## Model-level annotation requirements
 
@@ -21,7 +22,7 @@ hide:
 - **M03** The volume unit of the model should be specified via the model-level **substanceUnits**.
 - **M04** The extent unit of the model should be specified via the model-level **extentUnits**.
 - **M05** The model should have at least one model-level [BQM_HAS_TAXON](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM annotation, specifying the animal species of the model using a [NCBI Taxonomy](https://registry.identifiers.org/registry/taxonomy) identifier.
-- **M06** [TODO: link model to substance chemical applicability domain]
+- **M06** The chemical applicability domain of the model should be specified using the[BQB_HAS_PROPERTY](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM annotation, specifying the model chemical(s) a [ChEBI](https://www.ebi.ac.uk/chebi) identifier.
 
 ## Compartment-level annotation requirements
 
@@ -33,12 +34,11 @@ hide:
 
 - **S01:** All species should be assigned a unit representing an amount.
 - **S02:** All species should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a output parameter of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko).
-- **S03:** All species should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [TODO: link to chemical of a model].
+- **S03:** All species should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to one of the [ChEBI](https://www.ebi.ac.uk/chebi/) chemical identifiers defined for the model (see **M06**).
 
 ## Parameter-level annotation requirements
 
 - **P01:** All parameters should be assigned a unit.
 - **P02:** All parameters should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a parameter of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko).
 - **P03:** Each parameter should be linked to a different PBPKO [parameter](http://purl.obolibrary.org/obo/PBPKO_00002) class.
-- **P04:** All parameter linked to a PBPKO [biochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00139) or [physicochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00126) class should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [TODO: link to chemical of a model].
-- **P05:**  Units should be in compliance with the parameter type annotation.
+- **P04:** All parameter linked to a PBPKO [biochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00139) or [physicochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00126) class should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to one of the [ChEBI](https://www.ebi.ac.uk/chebi/) chemical identifiers defined for the model (see **M06**).
