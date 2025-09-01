@@ -17,12 +17,12 @@ hide:
 
 ## Model-level annotation requirements
 
-- **M01** The time resolution of the model should be specified via the model-level **timeUnits**.
-- **M02** The amounts unit of the model should be specified via the model-level **substanceUnits**.
-- **M03** The volume unit of the model should be specified via the model-level **substanceUnits**.
-- **M04** The extent unit of the model should be specified via the model-level **extentUnits**.
-- **M05** The model should have at least one model-level [BQM_HAS_TAXON](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM annotation, specifying the animal species of the model using a [NCBI Taxonomy](https://registry.identifiers.org/registry/taxonomy) identifier.
-- **M06** The chemical applicability domain of the model should be specified using the[BQB_HAS_PROPERTY](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM annotation, specifying the model chemical(s) a [ChEBI](https://www.ebi.ac.uk/chebi) identifier.
+- **M01:** The time resolution of the model should be specified via the model-level **timeUnits**.
+- **M02:** The amounts unit of the model should be specified via the model-level **substanceUnits**.
+- **M03:** The volume unit of the model should be specified via the model-level **substanceUnits**.
+- **M04:** The extent unit of the model should be specified via the model-level **extentUnits**.
+- **M05:** The model should have at least one model-level [BQM_HAS_TAXON](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM annotation, specifying the animal species of the model using a [NCBI Taxonomy](https://registry.identifiers.org/registry/taxonomy) identifier.
+- **M06:** The chemical applicability domain of the model should be specified using the[BQB_HAS_PROPERTY](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM annotation, specifying the model chemical(s) a [ChEBI](https://www.ebi.ac.uk/chebi) identifier.
 
 ## Compartment-level annotation requirements
 
