@@ -1,0 +1,254 @@
+rules:
+  # -----------------------------
+  # FINDABILITY (F)
+  # -----------------------------
+
+  - id: FND01
+    name: Machine-readable metadata
+    description: "Each PBK model must be accompanied by metadata in a machine-readable format (e.g., JSON-LD or RDF)."
+    fair_principle: findability
+    category: "Metadata"
+    motivation: "Enables automated indexing and discovery across repositories."
+
+  - id: FND02
+    name: Persistent identifiers
+    description: "Each PBK model and metadata record must have a globally unique and persistent identifier (e.g., DOI, Handle, identifiers.org URI)."
+    fair_principle: findability
+    category: "Identifiers"
+    motivation: "Guarantees stable references for citation and retrieval."
+
+  - id: FND03
+    name: Rich metadata
+    description: "Metadata must include authorship, version, creation date, domain keywords, and references to publications or datasets."
+    fair_principle: findability
+    category: "Metadata"
+    motivation: "Supports precise search and contextual understanding of the model."
+
+  - id: FND04
+    name: Indexed in searchable repository
+    description: "Models must be deposited in repositories that are indexed by major repositories/registries (e.g., BioModels, Zenodo)."
+    fair_principle: findability
+    category: "Repositories"
+    motivation: "Ensures models are findable by both humans and machines."
+
+  # -----------------------------
+  # ACCESSIBILITY (A)
+  # -----------------------------
+
+  - id: ACC01
+    name: Open protocols
+    description: "Models must be retrievable via open, free, and universally implementable protocols (e.g., HTTPS)."
+    fair_principle: accessibility
+    category: "Access methods"
+    motivation: "Guarantees broad access without proprietary software barriers."
+
+  - id: ACC02
+    name: Metadata longevity
+    description: "Metadata should remain accessible even if the model is withdrawn, deprecated, or embargoed."
+    fair_principle: accessibility
+    category: "Metadata"
+    motivation: "Preserves discoverability even when data access is restricted."
+
+  - id: ACC03
+    name: Authentication when required
+    description: "If access restrictions exist, authentication and authorization procedures must be documented and use open standards (e.g., OAuth2)."
+    fair_principle: accessibility
+    category: "Access control"
+    motivation: "Balances openness with ethical/legal requirements."
+
+  - id: ACC04
+    name: License clarity
+    description: "Access conditions and usage rights must be explicitly stated in the metadata and repository entry."
+    fair_principle: accessibility
+    category: "Licensing"
+    motivation: "Users understand upfront what they can or cannot do with the model."
+
+  # -----------------------------
+  # INTEROPERABILITY (I)
+  # -----------------------------
+
+  - id: F01
+    name: "Use SBML L3 v2+ XML"
+    description: "PBK model implementations should be published in *xml* file format using the [Systems Biology Markup Language (SBML)](https://sbml.org/) level 3 version 2 or higher."
+    fair_principle: interoperability
+    category: File format
+    motivation: "Widely supported, machine-readable"
+
+  - id: F02
+    name: "Annotate model and elements with SBML annotation scheme"
+    description: "The model and model elements described by the SBML file should be annotated using the therefore available annotation scheme (see, [specification](https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2))."
+    fair_principle: interoperability
+    category: File format
+    motivation: "Enables semantic clarity and interoperability"
+
+  - id: F03
+    name: "Specify units via SBML unit definitions"
+    description: "The units of the model and model elements described by the SBML file should specified using the therefore available system for unit definitions (see, [specification](https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2))."
+    fair_principle: interoperability
+    category: File format
+    motivation: "Ensures consistency accross tools and prevents scaling/interpretation errors"
+
+  - id: G01
+    name: "No hardcoded dosing parameters"
+    description: "The PBK model implementation should **NOT** contain parameters specifying the dosing. These should be added via events in model simulations."
+    fair_principle: interoperability
+    category: Model rules
+    motivation: "Enables modular interoperability, avoids hardcoded study-specific assumptions"
+
+  - id: M01
+    name: "Define time resolution with timeUnits"
+    description: "The time resolution of the model should be specified via the model-level **timeUnits**."
+    fair_principle: interoperability
+    category: Model rules
+    motivation: "Enables syntactic clarity, ensures correct temporal interpretation"
+
+  - id: M02
+    name: "Define amounts via substanceUnits"
+    description: "The amounts unit of the model should be specified via the model-level **substanceUnits**."
+    fair_principle: interoperability
+    category: Model rules
+    motivation: "Enables semantic consistency, prevents unit ambiguity"
+
+  - id: M03
+    name: "Define volumes via volumeUnits"
+    description: "The volume unit of the model should be specified via the model-level **volumeUnits**."
+    fair_principle: interoperability
+    category: Model rules
+    motivation: "Enables semantic consistency, prevents unit ambiguity"
+
+  - id: M04
+    name: "Define extents via extentUnits"
+    description: "The extent unit of the model should be specified via the model-level **extentUnits**."
+    fair_principle: interoperability
+    category: Model rules
+    motivation: "Enables semantic consistency, prevents unit ambiguity"
+
+  - id: M05
+    name: "Add MIRIAM BQM_HAS_TAXON annotation (species, NCBI Taxonomy)"
+    description: "The model should have at least one model-level [BQM_HAS_TAXON](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM annotation, specifying the animal species of the model using a [NCBI Taxonomy](https://registry.identifiers.org/registry/taxonomy) identifier."
+    fair_principle: interoperability
+    category: Model rules
+    motivation: "Enables semantic interoperability and cross-species integration"
+
+  - id: M06
+    name: "Add MIRIAM BQB_HAS_PROPERTY annotation (chemicals, ChEBI)"
+    description: "The chemical applicability domain of the model should be specified using the [BQB_HAS_PROPERTY](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM annotation, specifying the model chemical(s) a [ChEBI](https://www.ebi.ac.uk/chebi) identifier."
+    fair_principle: interoperability
+    category: Model rules
+    motivation: "Ensures consistency, explicitly ties model to (classes of) chemical entities"
+
+  - id: C01
+    name: "Assign volume units to compartments"
+    description: "All compartments should be assigned a unit representing a volume."
+    fair_principle: interoperability
+    category: Compartments
+    motivation: "Enables syntactic clarity and quantitative scaling"
+
+  - id: C02
+    name: "Annotate with PBPK ontology (BQM_IS)"
+    description: "All compartments should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [compartment](http://purl.obolibrary.org/obo/PBPKO_00446) of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko)."
+    fair_principle: interoperability
+    category: Compartments
+    motivation: "Enables semantic interoperability by mapping model compartments to shared ontology"
+
+  - id: C03
+    name: "Unique PBPKO class for each compartment"
+    description: "Each compartment should be associated with a different PBPKO [compartment](http://purl.obolibrary.org/obo/PBPKO_00446) class."
+    fair_principle: interoperability
+    category: Compartments
+    motivation: "Enables ontological clarity, prevents duplicate/misaligned semantics"
+
+  - id: S01
+    name: "Assign amount units to species"
+    description: "All species should be assigned a unit representing an amount."
+    fair_principle: interoperability
+    category: Species
+    motivation: "Enables numerical clarity, avoids ambiguous concentration vs. amount"
+
+  - id: S02
+    name: "Annotate with PBPK ontology (BQM_IS)"
+    description: "All species should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [output parameter](http://purl.obolibrary.org/obo/PBPKO_00252) of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko)."
+    fair_principle: interoperability
+    category: Species
+    motivation: "Enables semantic clarity by linking to ontology-defined output parameter"
+
+  - id: S03
+    name: "Annotate with ChEBI chemical (BQB_IS)"
+    description: "All species should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to one of the [ChEBI](https://www.ebi.ac.uk/chebi/) chemical identifiers defined for the model (see **M06**)."
+    fair_principle: interoperability
+    category: Species
+    motivation: "Enables semantic interoperability, ensures consistent chemical reference"
+
+  - id: S04
+    name: "Link species to a compartment"
+    description: "All species should be linked to a compartment."
+    fair_principle: interoperability
+    category: Species
+    motivation: "Ensures structural clarity"
+
+  - id: P01
+    name: "Assign units to parameters"
+    description: "All parameters should be assigned a unit."
+    fair_principle: interoperability
+    category: Parameters
+    motivation: "Enables numerical consistency and prevents scaling errors"
+
+  - id: P02
+    name: "Annotate with PBPK ontology (BQM_IS)"
+    description: "All parameters should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a parameter of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko)."
+    fair_principle: interoperability
+    category: Parameters
+    motivation: "Enables semantic clarity by linking to ontology-defined parameter type"
+
+  - id: P03
+    name: "Unique PBPKO class for each parameter"
+    description: "Each parameter should be associated with a different PBPKO [parameter](http://purl.obolibrary.org/obo/PBPKO_00002) class."
+    fair_principle: interoperability
+    category: Parameters
+    motivation: "Enables ontological clarity, avoids semantic overlap"
+
+  - id: P04
+    name: "Params in biochem/physicochem class must also have ChEBI (BQB_IS)"
+    description: "All parameter associated with a [biochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00139) or [physicochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00126) class of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko) (see **P02**) should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to one of the [ChEBI](https://www.ebi.ac.uk/chebi/) chemical identifiers defined for the model (see **M06**)."
+    fair_principle: interoperability
+    category: Parameters
+    motivation: "Enables semantic interoperability by connecting parameter to chemical identity"
+
+  # -----------------------------
+  # REUSABILITY (R)
+  # -----------------------------
+
+  - id: REU01
+    name: Clear usage license
+    description: "Models must be distributed under a clear, accessible, and preferably open license (e.g., CC-BY, CC0, MIT)."
+    fair_principle: reusability
+    category: "Licensing"
+    motivation: "Ensures legal clarity for reuse and derivative works."
+
+  - id: REU02
+    name: Provenance documentation
+    description: "Metadata must describe the origin of the model, including data sources, assumptions, and modeling methods."
+    fair_principle: reusability
+    category: "Provenance"
+    motivation: "Allows others to trust, validate, and build upon the model."
+
+  - id: REU03
+    name: Domain standards compliance
+    description: "By complying to the FAIR PBK standard, models adhere to community standards."
+    fair_principle: reusability
+    category: "Standards"
+    motivation: "Promotes interoperability and long-term usability."
+
+  - id: REU04
+    name: Versioning
+    description: "Each model release must have a version identifier, with changelogs describing differences from prior versions. Each version should have its own unique identifier (see FND02)."
+    fair_principle: reusability
+    category: "Versioning"
+    motivation: "Supports reproducibility and long-term research integrity."
+
+  - id: REU05
+    name: Documentation of intended use
+    description: "Model metadata must include statements of scope, limitations, and intended application domains."
+    fair_principle: reusability
+    category: "Documentation"
+    motivation: "Helps users assess whether the model fits their research needs."

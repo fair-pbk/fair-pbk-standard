@@ -8,9 +8,9 @@ hide:
 
 This FAIR PBK standard is currently being developed in an explorative manner to evaluate how to obtain a truly harmonised and interoperable exchange format for models, and to develop and test a strategy/standard for annotation of terms and units specifically for PBK models. The aim is to adopt and/or align with already existing initiatives as much as possible.
 
-At present, the following resources are considered essential for building up a standard for FAIR PBK modelling:
-
 ## Resources
+
+At present, the following resources are considered essential for building up a standard for FAIR PBK modelling:
 
 - **[SBML](https://sbml.org/):** Use of the [Systems Biology Markup Language (SBML)](https://sbml.org/) as a harmonized publication and exchange format for PBK models, which should bridge the gap between the various different model implementation languages that are currently used by PBK model developers.
 - **[PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko):** Use of the (currently being developed) [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko) for annotation of all model elements (e.g., compartments, species, parameters).

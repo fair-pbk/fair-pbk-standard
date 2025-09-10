@@ -1,0 +1,18 @@
+---
+hide:
+  - navigation
+---
+
+# Specification
+
+{% for principle, rules in rules_by_principle.items() %}
+## {{ principle.title() }}
+
+| Rule | Rule | Description | Motivation |
+|------|------|-------------|------------|
+{% for rule in rules -%}
+| {{ rule.id }} | {{ rule.name }} | {{ rule.description | replace("\n", " ") }} | {{ rule.motivation }} |
+{% endfor %}
+
+{% endfor %}
+
