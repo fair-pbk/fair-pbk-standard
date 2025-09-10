@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
@@ -49,6 +49,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../css/extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -376,54 +378,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#file-format" class="md-nav__link">
+  <a href="#findability" class="md-nav__link">
     <span class="md-ellipsis">
-      File format
+      Findability
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#general" class="md-nav__link">
+  <a href="#accessibility" class="md-nav__link">
     <span class="md-ellipsis">
-      General
+      Accessibility
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#model-level-annotation-requirements" class="md-nav__link">
+  <a href="#interoperability" class="md-nav__link">
     <span class="md-ellipsis">
-      Model-level annotation requirements
+      Interoperability
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#compartment-level-annotation-requirements" class="md-nav__link">
+  <a href="#reusability" class="md-nav__link">
     <span class="md-ellipsis">
-      Compartment-level annotation requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#species-level-annotation-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Species-level annotation requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameter-level-annotation-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameter-level annotation requirements
+      Reusability
     </span>
   </a>
   
@@ -488,54 +472,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#file-format" class="md-nav__link">
+  <a href="#findability" class="md-nav__link">
     <span class="md-ellipsis">
-      File format
+      Findability
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#general" class="md-nav__link">
+  <a href="#accessibility" class="md-nav__link">
     <span class="md-ellipsis">
-      General
+      Accessibility
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#model-level-annotation-requirements" class="md-nav__link">
+  <a href="#interoperability" class="md-nav__link">
     <span class="md-ellipsis">
-      Model-level annotation requirements
+      Interoperability
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#compartment-level-annotation-requirements" class="md-nav__link">
+  <a href="#reusability" class="md-nav__link">
     <span class="md-ellipsis">
-      Compartment-level annotation requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#species-level-annotation-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Species-level annotation requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameter-level-annotation-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameter-level annotation requirements
+      Reusability
     </span>
   </a>
   
@@ -563,44 +529,262 @@
 
 
 <h1 id="specification">Specification</h1>
-<h2 id="file-format">File format</h2>
-<ul>
-<li><strong>F01:</strong> PBK model implementations should be published in <em>xml</em> file format using the <a href="https://sbml.org/">Systems Biology Markup Language (SBML)</a> level 3 version 2 or higher.</li>
-<li><strong>F02:</strong> The model and model elements described by the SBML file should be annotated using the therefore available <a href="https://sbml.org/documents/elaborations/miriam_annotation_syntax/">annotation scheme</a>.</li>
-<li><strong>F03:</strong> The units of the model and model elements described by the SBML file should specified using the therefore available system for unit definitions.</li>
-</ul>
-<h2 id="general">General</h2>
-<ul>
-<li><strong>G01:</strong> The PBK model implementation should <strong>NOT</strong> contain parameters specifying the dosing. These should be added via events in model simulations.</li>
-</ul>
-<h2 id="model-level-annotation-requirements">Model-level annotation requirements</h2>
-<ul>
-<li><strong>M01:</strong> The time resolution of the model should be specified via the model-level <strong>timeUnits</strong>.</li>
-<li><strong>M02:</strong> The amounts unit of the model should be specified via the model-level <strong>substanceUnits</strong>.</li>
-<li><strong>M03:</strong> The volume unit of the model should be specified via the model-level <strong>substanceUnits</strong>.</li>
-<li><strong>M04:</strong> The extent unit of the model should be specified via the model-level <strong>extentUnits</strong>.</li>
-<li><strong>M05:</strong> The model should have at least one model-level <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_HAS_TAXON</a> MIRIAM annotation, specifying the animal species of the model using a <a href="https://registry.identifiers.org/registry/taxonomy">NCBI Taxonomy</a> identifier.</li>
-<li><strong>M06:</strong> The chemical applicability domain of the model should be specified using the<a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQB_HAS_PROPERTY</a> MIRIAM annotation, specifying the model chemical(s) a <a href="https://www.ebi.ac.uk/chebi">ChEBI</a> identifier.</li>
-</ul>
-<h2 id="compartment-level-annotation-requirements">Compartment-level annotation requirements</h2>
-<ul>
-<li><strong>C01:</strong> All compartments should be assigned a unit representing a volume.</li>
-<li><strong>C02:</strong> All compartments should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_IS</a> MIRIAM element annotation linking them to a <a href="http://purl.obolibrary.org/obo/PBPKO_00446">compartment</a> of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a>.</li>
-<li><strong>C03:</strong> Each compartment should be linked to a different PBPKO <a href="http://purl.obolibrary.org/obo/PBPKO_00446">compartment</a> class.</li>
-</ul>
-<h2 id="species-level-annotation-requirements">Species-level annotation requirements</h2>
-<ul>
-<li><strong>S01:</strong> All species should be assigned a unit representing an amount.</li>
-<li><strong>S02:</strong> All species should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_IS</a> MIRIAM element annotation linking them to a output parameter of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a>.</li>
-<li><strong>S03:</strong> All species should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQB_IS</a> MIRIAM element annotation linking them to one of the <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> chemical identifiers defined for the model (see <strong>M06</strong>).</li>
-</ul>
-<h2 id="parameter-level-annotation-requirements">Parameter-level annotation requirements</h2>
-<ul>
-<li><strong>P01:</strong> All parameters should be assigned a unit.</li>
-<li><strong>P02:</strong> All parameters should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_IS</a> MIRIAM element annotation linking them to a parameter of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a>.</li>
-<li><strong>P03:</strong> Each parameter should be linked to a different PBPKO <a href="http://purl.obolibrary.org/obo/PBPKO_00002">parameter</a> class.</li>
-<li><strong>P04:</strong> All parameter linked to a PBPKO <a href="http://purl.obolibrary.org/obo/PBPKO_00139">biochemical parameter</a> or <a href="http://purl.obolibrary.org/obo/PBPKO_00126">physicochemical parameter</a> class should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQB_IS</a> MIRIAM element annotation linking them to one of the <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> chemical identifiers defined for the model (see <strong>M06</strong>).</li>
-</ul>
+<h2 id="findability">Findability</h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Rule</th>
+<th>Description</th>
+<th>Motivation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FND01</td>
+<td>Machine-readable metadata</td>
+<td>Each PBK model must be accompanied by metadata in a machine-readable format (e.g., JSON-LD or RDF).</td>
+<td>Enables automated indexing and discovery across repositories.</td>
+</tr>
+<tr>
+<td>FND02</td>
+<td>Persistent identifiers</td>
+<td>Each PBK model and metadata record must have a globally unique and persistent identifier (e.g., DOI, Handle, identifiers.org URI).</td>
+<td>Guarantees stable references for citation and retrieval.</td>
+</tr>
+<tr>
+<td>FND03</td>
+<td>Rich metadata</td>
+<td>Metadata must include authorship, version, creation date, domain keywords, and references to publications or datasets.</td>
+<td>Supports precise search and contextual understanding of the model.</td>
+</tr>
+<tr>
+<td>FND04</td>
+<td>Indexed in searchable repository</td>
+<td>Models must be deposited in repositories that are indexed by major repositories/registries (e.g., BioModels, Zenodo).</td>
+<td>Ensures models are findable by both humans and machines.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="accessibility">Accessibility</h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Rule</th>
+<th>Description</th>
+<th>Motivation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACC01</td>
+<td>Open protocols</td>
+<td>Models must be retrievable via open, free, and universally implementable protocols (e.g., HTTPS).</td>
+<td>Guarantees broad access without proprietary software barriers.</td>
+</tr>
+<tr>
+<td>ACC02</td>
+<td>Metadata longevity</td>
+<td>Metadata should remain accessible even if the model is withdrawn, deprecated, or embargoed.</td>
+<td>Preserves discoverability even when data access is restricted.</td>
+</tr>
+<tr>
+<td>ACC03</td>
+<td>Authentication when required</td>
+<td>If access restrictions exist, authentication and authorization procedures must be documented and use open standards (e.g., OAuth2).</td>
+<td>Balances openness with ethical/legal requirements.</td>
+</tr>
+<tr>
+<td>ACC04</td>
+<td>License clarity</td>
+<td>Access conditions and usage rights must be explicitly stated in the metadata and repository entry.</td>
+<td>Users understand upfront what they can or cannot do with the model.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="interoperability">Interoperability</h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Rule</th>
+<th>Description</th>
+<th>Motivation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F01</td>
+<td>Use SBML L3 v2+ XML</td>
+<td>PBK model implementations should be published in <em>xml</em> file format using the <a href="https://sbml.org/">Systems Biology Markup Language (SBML)</a> level 3 version 2 or higher.</td>
+<td>Widely supported, machine-readable</td>
+</tr>
+<tr>
+<td>F02</td>
+<td>Annotate model and elements with SBML annotation scheme</td>
+<td>The model and model elements described by the SBML file should be annotated using the therefore available annotation scheme (see, <a href="https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2">specification</a>).</td>
+<td>Enables semantic clarity and interoperability</td>
+</tr>
+<tr>
+<td>F03</td>
+<td>Specify units via SBML unit definitions</td>
+<td>The units of the model and model elements described by the SBML file should specified using the therefore available system for unit definitions (see, <a href="https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2">specification</a>).</td>
+<td>Ensures consistency accross tools and prevents scaling/interpretation errors</td>
+</tr>
+<tr>
+<td>G01</td>
+<td>No hardcoded dosing parameters</td>
+<td>The PBK model implementation should <strong>NOT</strong> contain parameters specifying the dosing. These should be added via events in model simulations.</td>
+<td>Enables modular interoperability, avoids hardcoded study-specific assumptions</td>
+</tr>
+<tr>
+<td>M01</td>
+<td>Define time resolution with timeUnits</td>
+<td>The time resolution of the model should be specified via the model-level <strong>timeUnits</strong>.</td>
+<td>Enables syntactic clarity, ensures correct temporal interpretation</td>
+</tr>
+<tr>
+<td>M02</td>
+<td>Define amounts via substanceUnits</td>
+<td>The amounts unit of the model should be specified via the model-level <strong>substanceUnits</strong>.</td>
+<td>Enables semantic consistency, prevents unit ambiguity</td>
+</tr>
+<tr>
+<td>M03</td>
+<td>Define volumes via volumeUnits</td>
+<td>The volume unit of the model should be specified via the model-level <strong>volumeUnits</strong>.</td>
+<td>Enables semantic consistency, prevents unit ambiguity</td>
+</tr>
+<tr>
+<td>M04</td>
+<td>Define extents via extentUnits</td>
+<td>The extent unit of the model should be specified via the model-level <strong>extentUnits</strong>.</td>
+<td>Enables semantic consistency, prevents unit ambiguity</td>
+</tr>
+<tr>
+<td>M05</td>
+<td>Add MIRIAM BQM_HAS_TAXON annotation (species, NCBI Taxonomy)</td>
+<td>The model should have at least one model-level <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_HAS_TAXON</a> MIRIAM annotation, specifying the animal species of the model using a <a href="https://registry.identifiers.org/registry/taxonomy">NCBI Taxonomy</a> identifier.</td>
+<td>Enables semantic interoperability and cross-species integration</td>
+</tr>
+<tr>
+<td>M06</td>
+<td>Add MIRIAM BQB_HAS_PROPERTY annotation (chemicals, ChEBI)</td>
+<td>The chemical applicability domain of the model should be specified using the <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQB_HAS_PROPERTY</a> MIRIAM annotation, specifying the model chemical(s) a <a href="https://www.ebi.ac.uk/chebi">ChEBI</a> identifier.</td>
+<td>Ensures consistency, explicitly ties model to (classes of) chemical entities</td>
+</tr>
+<tr>
+<td>C01</td>
+<td>Assign volume units to compartments</td>
+<td>All compartments should be assigned a unit representing a volume.</td>
+<td>Enables syntactic clarity and quantitative scaling</td>
+</tr>
+<tr>
+<td>C02</td>
+<td>Annotate with PBPK ontology (BQM_IS)</td>
+<td>All compartments should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_IS</a> MIRIAM element annotation linking them to a <a href="http://purl.obolibrary.org/obo/PBPKO_00446">compartment</a> of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a>.</td>
+<td>Enables semantic interoperability by mapping model compartments to shared ontology</td>
+</tr>
+<tr>
+<td>C03</td>
+<td>Unique PBPKO class for each compartment</td>
+<td>Each compartment should be associated with a different PBPKO <a href="http://purl.obolibrary.org/obo/PBPKO_00446">compartment</a> class.</td>
+<td>Enables ontological clarity, prevents duplicate/misaligned semantics</td>
+</tr>
+<tr>
+<td>S01</td>
+<td>Assign amount units to species</td>
+<td>All species should be assigned a unit representing an amount.</td>
+<td>Enables numerical clarity, avoids ambiguous concentration vs. amount</td>
+</tr>
+<tr>
+<td>S02</td>
+<td>Annotate with PBPK ontology (BQM_IS)</td>
+<td>All species should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_IS</a> MIRIAM element annotation linking them to a <a href="http://purl.obolibrary.org/obo/PBPKO_00252">output parameter</a> of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a>.</td>
+<td>Enables semantic clarity by linking to ontology-defined output parameter</td>
+</tr>
+<tr>
+<td>S03</td>
+<td>Annotate with ChEBI chemical (BQB_IS)</td>
+<td>All species should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQB_IS</a> MIRIAM element annotation linking them to one of the <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> chemical identifiers defined for the model (see <strong>M06</strong>).</td>
+<td>Enables semantic interoperability, ensures consistent chemical reference</td>
+</tr>
+<tr>
+<td>S04</td>
+<td>Link species to a compartment</td>
+<td>All species should be linked to a compartment.</td>
+<td>Ensures structural clarity</td>
+</tr>
+<tr>
+<td>P01</td>
+<td>Assign units to parameters</td>
+<td>All parameters should be assigned a unit.</td>
+<td>Enables numerical consistency and prevents scaling errors</td>
+</tr>
+<tr>
+<td>P02</td>
+<td>Annotate with PBPK ontology (BQM_IS)</td>
+<td>All parameters should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_IS</a> MIRIAM element annotation linking them to a parameter of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a>.</td>
+<td>Enables semantic clarity by linking to ontology-defined parameter type</td>
+</tr>
+<tr>
+<td>P03</td>
+<td>Unique PBPKO class for each parameter</td>
+<td>Each parameter should be associated with a different PBPKO <a href="http://purl.obolibrary.org/obo/PBPKO_00002">parameter</a> class.</td>
+<td>Enables ontological clarity, avoids semantic overlap</td>
+</tr>
+<tr>
+<td>P04</td>
+<td>Params in biochem/physicochem class must also have ChEBI (BQB_IS)</td>
+<td>All parameter associated with a <a href="http://purl.obolibrary.org/obo/PBPKO_00139">biochemical parameter</a> or <a href="http://purl.obolibrary.org/obo/PBPKO_00126">physicochemical parameter</a> class of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a> (see <strong>P02</strong>) should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQB_IS</a> MIRIAM element annotation linking them to one of the <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> chemical identifiers defined for the model (see <strong>M06</strong>).</td>
+<td>Enables semantic interoperability by connecting parameter to chemical identity</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reusability">Reusability</h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Rule</th>
+<th>Description</th>
+<th>Motivation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REU01</td>
+<td>Clear usage license</td>
+<td>Models must be distributed under a clear, accessible, and preferably open license (e.g., CC-BY, CC0, MIT).</td>
+<td>Ensures legal clarity for reuse and derivative works.</td>
+</tr>
+<tr>
+<td>REU02</td>
+<td>Provenance documentation</td>
+<td>Metadata must describe the origin of the model, including data sources, assumptions, and modeling methods.</td>
+<td>Allows others to trust, validate, and build upon the model.</td>
+</tr>
+<tr>
+<td>REU03</td>
+<td>Domain standards compliance</td>
+<td>By complying to the FAIR PBK standard, models adhere to community standards.</td>
+<td>Promotes interoperability and long-term usability.</td>
+</tr>
+<tr>
+<td>REU04</td>
+<td>Versioning</td>
+<td>Each model release must have a version identifier, with changelogs describing differences from prior versions. Each version should have its own unique identifier (see FND02).</td>
+<td>Supports reproducibility and long-term research integrity.</td>
+</tr>
+<tr>
+<td>REU05</td>
+<td>Documentation of intended use</td>
+<td>Model metadata must include statements of scope, limitations, and intended application domains.</td>
+<td>Helps users assess whether the model fits their research needs.</td>
+</tr>
+</tbody>
+</table>
 
 
 
