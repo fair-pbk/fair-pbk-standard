@@ -675,7 +675,7 @@
 <table>
 <thead>
 <tr>
-<th>Rule</th>
+<th>ID</th>
 <th>Rule</th>
 <th>Description</th>
 <th>Motivation</th>
@@ -683,19 +683,19 @@
 </thead>
 <tbody>
 <tr>
-<td>F01</td>
+<td><strong>F01</strong></td>
 <td>Use SBML L3 v2+ XML</td>
 <td>PBK model implementations should be published in <em>xml</em> file format using the <a href="https://sbml.org/">Systems Biology Markup Language (SBML)</a> level 3 version 2 or higher.</td>
 <td>Widely supported, machine-readable</td>
 </tr>
 <tr>
-<td>F02</td>
+<td><strong>F02</strong></td>
 <td>Annotate model and elements with SBML annotation scheme</td>
 <td>The model and model elements described by the SBML file should be annotated using the therefore available annotation scheme (see <a href="https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2">SBML specification</a>).</td>
 <td>Enables semantic clarity and interoperability</td>
 </tr>
 <tr>
-<td>F03</td>
+<td><strong>F03</strong></td>
 <td>Specify units via SBML unit definitions</td>
 <td>The units of the model and model elements described by the SBML file should specified using the therefore available system for unit definitions (see <a href="https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2">SBML specification</a>).</td>
 <td>Ensures consistency accross tools and prevents scaling/interpretation errors</td>
@@ -706,7 +706,7 @@
 <table>
 <thead>
 <tr>
-<th>Rule</th>
+<th>ID</th>
 <th>Rule</th>
 <th>Description</th>
 <th>Motivation</th>
@@ -714,43 +714,43 @@
 </thead>
 <tbody>
 <tr>
-<td>G01</td>
+<td><strong>G01</strong></td>
 <td>No hardcoded dosing parameters</td>
 <td>The PBK model implementation should <strong>NOT</strong> contain parameters specifying the dosing. These should be added via events in model simulations.</td>
 <td>Enables modular interoperability, avoids hardcoded study-specific assumptions</td>
 </tr>
 <tr>
-<td>M01</td>
+<td><strong>M01</strong></td>
 <td>Define time resolution with timeUnits</td>
 <td>The time resolution of the model should be specified via the model-level <strong>timeUnits</strong>.</td>
 <td>Enables syntactic clarity, ensures correct temporal interpretation</td>
 </tr>
 <tr>
-<td>M02</td>
+<td><strong>M02</strong></td>
 <td>Define amounts via substanceUnits</td>
 <td>The amounts unit of the model should be specified via the model-level <strong>substanceUnits</strong>.</td>
 <td>Enables semantic consistency, prevents unit ambiguity</td>
 </tr>
 <tr>
-<td>M03</td>
+<td><strong>M03</strong></td>
 <td>Define volumes via volumeUnits</td>
 <td>The volume unit of the model should be specified via the model-level <strong>volumeUnits</strong>.</td>
 <td>Enables semantic consistency, prevents unit ambiguity</td>
 </tr>
 <tr>
-<td>M04</td>
+<td><strong>M04</strong></td>
 <td>Define extents via extentUnits</td>
 <td>The extent unit of the model should be specified via the model-level <strong>extentUnits</strong>.</td>
 <td>Enables semantic consistency, prevents unit ambiguity</td>
 </tr>
 <tr>
-<td>M05</td>
+<td><strong>M05</strong></td>
 <td>Add MIRIAM BQM_HAS_TAXON annotation (species, NCBI Taxonomy)</td>
 <td>The model should have at least one model-level <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_HAS_TAXON</a> MIRIAM annotation, specifying the animal species of the model using a <a href="https://registry.identifiers.org/registry/taxonomy">NCBI Taxonomy</a> identifier.</td>
 <td>Enables semantic interoperability and cross-species integration</td>
 </tr>
 <tr>
-<td>M06</td>
+<td><strong>M06</strong></td>
 <td>Add MIRIAM BQB_HAS_PROPERTY annotation (chemicals, ChEBI)</td>
 <td>The chemical applicability domain of the model should be specified using the <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQB_HAS_PROPERTY</a> MIRIAM annotation, specifying the model chemical(s) a <a href="https://www.ebi.ac.uk/chebi">ChEBI</a> identifier.</td>
 <td>Ensures consistency, explicitly ties model to (classes of) chemical entities</td>
@@ -761,7 +761,7 @@
 <table>
 <thead>
 <tr>
-<th>Rule</th>
+<th>ID</th>
 <th>Rule</th>
 <th>Description</th>
 <th>Motivation</th>
@@ -769,19 +769,19 @@
 </thead>
 <tbody>
 <tr>
-<td>C01</td>
+<td><strong>C01</strong></td>
 <td>Assign volume units to compartments</td>
 <td>All compartments should be assigned a unit representing a volume.</td>
 <td>Enables syntactic clarity and quantitative scaling</td>
 </tr>
 <tr>
-<td>C02</td>
+<td><strong>C02</strong></td>
 <td>Annotate with PBPK ontology (BQM_IS)</td>
 <td>All compartments should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_IS</a> MIRIAM element annotation linking them to a <a href="http://purl.obolibrary.org/obo/PBPKO_00446">compartment</a> of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a>.</td>
 <td>Enables semantic interoperability by mapping model compartments to shared ontology</td>
 </tr>
 <tr>
-<td>C03</td>
+<td><strong>C03</strong></td>
 <td>Unique PBPKO class for each compartment</td>
 <td>Each compartment should be associated with a different PBPKO <a href="http://purl.obolibrary.org/obo/PBPKO_00446">compartment</a> class.</td>
 <td>Enables ontological clarity, prevents duplicate/misaligned semantics</td>
@@ -792,7 +792,7 @@
 <table>
 <thead>
 <tr>
-<th>Rule</th>
+<th>ID</th>
 <th>Rule</th>
 <th>Description</th>
 <th>Motivation</th>
@@ -800,25 +800,25 @@
 </thead>
 <tbody>
 <tr>
-<td>S01</td>
+<td><strong>S01</strong></td>
 <td>Assign amount units to species</td>
 <td>All species should be assigned a unit representing an amount.</td>
 <td>Enables numerical clarity, avoids ambiguous concentration vs. amount</td>
 </tr>
 <tr>
-<td>S02</td>
+<td><strong>S02</strong></td>
 <td>Annotate with PBPK ontology (BQM_IS)</td>
 <td>All species should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_IS</a> MIRIAM element annotation linking them to a <a href="http://purl.obolibrary.org/obo/PBPKO_00252">output parameter</a> of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a>.</td>
 <td>Enables semantic clarity by linking to ontology-defined output parameter</td>
 </tr>
 <tr>
-<td>S03</td>
+<td><strong>S03</strong></td>
 <td>Annotate with ChEBI chemical (BQB_IS)</td>
 <td>All species should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQB_IS</a> MIRIAM element annotation linking them to one of the <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> chemical identifiers defined for the model (see <strong>M06</strong>).</td>
 <td>Enables semantic interoperability, ensures consistent chemical reference</td>
 </tr>
 <tr>
-<td>S04</td>
+<td><strong>S04</strong></td>
 <td>Link species to a compartment</td>
 <td>All species should be linked to a compartment.</td>
 <td>Ensures structural clarity</td>
@@ -829,7 +829,7 @@
 <table>
 <thead>
 <tr>
-<th>Rule</th>
+<th>ID</th>
 <th>Rule</th>
 <th>Description</th>
 <th>Motivation</th>
@@ -837,25 +837,25 @@
 </thead>
 <tbody>
 <tr>
-<td>P01</td>
+<td><strong>P01</strong></td>
 <td>Assign units to parameters</td>
 <td>All parameters should be assigned a unit.</td>
 <td>Enables numerical consistency and prevents scaling errors</td>
 </tr>
 <tr>
-<td>P02</td>
+<td><strong>P02</strong></td>
 <td>Annotate with PBPK ontology (BQM_IS)</td>
 <td>All parameters should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQM_IS</a> MIRIAM element annotation linking them to a parameter of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a>.</td>
 <td>Enables semantic clarity by linking to ontology-defined parameter type</td>
 </tr>
 <tr>
-<td>P03</td>
+<td><strong>P03</strong></td>
 <td>Unique PBPKO class for each parameter</td>
 <td>Each parameter should be associated with a different PBPKO <a href="http://purl.obolibrary.org/obo/PBPKO_00002">parameter</a> class.</td>
 <td>Enables ontological clarity, avoids semantic overlap</td>
 </tr>
 <tr>
-<td>P04</td>
+<td><strong>P04</strong></td>
 <td>Params in biochem/physicochem class must also have ChEBI (BQB_IS)</td>
 <td>All parameter associated with a <a href="http://purl.obolibrary.org/obo/PBPKO_00139">biochemical parameter</a> or <a href="http://purl.obolibrary.org/obo/PBPKO_00126">physicochemical parameter</a> class of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a> (see <strong>P02</strong>) should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQB_IS</a> MIRIAM element annotation linking them to one of the <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> chemical identifiers defined for the model (see <strong>M06</strong>).</td>
 <td>Enables semantic interoperability by connecting parameter to chemical identity</td>
