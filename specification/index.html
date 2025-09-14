@@ -16,7 +16,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../about/">
+        <link rel="next" href="../use_in_FIP/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -233,6 +233,63 @@
   
   
     <li class="md-tabs__item">
+      <a href="../use_in_FIP/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Use in FIP
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../example/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Example
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../resources/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../about/" class="md-tabs__link">
         
   
@@ -378,36 +435,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#findability" class="md-nav__link">
+  <a href="#file-format" class="md-nav__link">
     <span class="md-ellipsis">
-      Findability
+      File format
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#accessibility" class="md-nav__link">
+  <a href="#model-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessibility
+      Model rules
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interoperability" class="md-nav__link">
+  <a href="#compartments-annotation" class="md-nav__link">
     <span class="md-ellipsis">
-      Interoperability
+      Compartments annotation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reusability" class="md-nav__link">
+  <a href="#species-annotation" class="md-nav__link">
     <span class="md-ellipsis">
-      Reusability
+      Species annotation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter annotation
     </span>
   </a>
   
@@ -417,6 +483,72 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../use_in_FIP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use in FIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Example
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -472,36 +604,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#findability" class="md-nav__link">
+  <a href="#file-format" class="md-nav__link">
     <span class="md-ellipsis">
-      Findability
+      File format
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#accessibility" class="md-nav__link">
+  <a href="#model-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessibility
+      Model rules
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interoperability" class="md-nav__link">
+  <a href="#compartments-annotation" class="md-nav__link">
     <span class="md-ellipsis">
-      Interoperability
+      Compartments annotation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reusability" class="md-nav__link">
+  <a href="#species-annotation" class="md-nav__link">
     <span class="md-ellipsis">
-      Reusability
+      Species annotation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter annotation
     </span>
   </a>
   
@@ -529,81 +670,8 @@
 
 
 <h1 id="specification">Specification</h1>
-<h2 id="findability">Findability</h2>
-<table>
-<thead>
-<tr>
-<th>Rule</th>
-<th>Rule</th>
-<th>Description</th>
-<th>Motivation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>FND01</td>
-<td>Machine-readable metadata</td>
-<td>Each PBK model must be accompanied by metadata in a machine-readable format (e.g., JSON-LD or RDF).</td>
-<td>Enables automated indexing and discovery across repositories.</td>
-</tr>
-<tr>
-<td>FND02</td>
-<td>Persistent identifiers</td>
-<td>Each PBK model and metadata record must have a globally unique and persistent identifier (e.g., DOI, Handle, identifiers.org URI).</td>
-<td>Guarantees stable references for citation and retrieval.</td>
-</tr>
-<tr>
-<td>FND03</td>
-<td>Rich metadata</td>
-<td>Metadata must include authorship, version, creation date, domain keywords, and references to publications or datasets.</td>
-<td>Supports precise search and contextual understanding of the model.</td>
-</tr>
-<tr>
-<td>FND04</td>
-<td>Indexed in searchable repository</td>
-<td>Models must be deposited in repositories that are indexed by major repositories/registries (e.g., BioModels, Zenodo).</td>
-<td>Ensures models are findable by both humans and machines.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="accessibility">Accessibility</h2>
-<table>
-<thead>
-<tr>
-<th>Rule</th>
-<th>Rule</th>
-<th>Description</th>
-<th>Motivation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ACC01</td>
-<td>Open protocols</td>
-<td>Models must be retrievable via open, free, and universally implementable protocols (e.g., HTTPS).</td>
-<td>Guarantees broad access without proprietary software barriers.</td>
-</tr>
-<tr>
-<td>ACC02</td>
-<td>Metadata longevity</td>
-<td>Metadata should remain accessible even if the model is withdrawn, deprecated, or embargoed.</td>
-<td>Preserves discoverability even when data access is restricted.</td>
-</tr>
-<tr>
-<td>ACC03</td>
-<td>Authentication when required</td>
-<td>If access restrictions exist, authentication and authorization procedures must be documented and use open standards (e.g., OAuth2).</td>
-<td>Balances openness with ethical/legal requirements.</td>
-</tr>
-<tr>
-<td>ACC04</td>
-<td>License clarity</td>
-<td>Access conditions and usage rights must be explicitly stated in the metadata and repository entry.</td>
-<td>Users understand upfront what they can or cannot do with the model.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="interoperability">Interoperability</h2>
+<p>The FAIR PBK standard sets out rules for publishing PBK model code as digital objects to promote interoperability and reusability. These rules are described below.</p>
+<h2 id="file-format">File format</h2>
 <table>
 <thead>
 <tr>
@@ -623,15 +691,28 @@
 <tr>
 <td>F02</td>
 <td>Annotate model and elements with SBML annotation scheme</td>
-<td>The model and model elements described by the SBML file should be annotated using the therefore available annotation scheme (see, <a href="https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2">specification</a>).</td>
+<td>The model and model elements described by the SBML file should be annotated using the therefore available annotation scheme (see <a href="https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2">SBML specification</a>).</td>
 <td>Enables semantic clarity and interoperability</td>
 </tr>
 <tr>
 <td>F03</td>
 <td>Specify units via SBML unit definitions</td>
-<td>The units of the model and model elements described by the SBML file should specified using the therefore available system for unit definitions (see, <a href="https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2">specification</a>).</td>
+<td>The units of the model and model elements described by the SBML file should specified using the therefore available system for unit definitions (see <a href="https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2">SBML specification</a>).</td>
 <td>Ensures consistency accross tools and prevents scaling/interpretation errors</td>
 </tr>
+</tbody>
+</table>
+<h2 id="model-rules">Model rules</h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Rule</th>
+<th>Description</th>
+<th>Motivation</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>G01</td>
 <td>No hardcoded dosing parameters</td>
@@ -674,6 +755,19 @@
 <td>The chemical applicability domain of the model should be specified using the <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQB_HAS_PROPERTY</a> MIRIAM annotation, specifying the model chemical(s) a <a href="https://www.ebi.ac.uk/chebi">ChEBI</a> identifier.</td>
 <td>Ensures consistency, explicitly ties model to (classes of) chemical entities</td>
 </tr>
+</tbody>
+</table>
+<h2 id="compartments-annotation">Compartments annotation</h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Rule</th>
+<th>Description</th>
+<th>Motivation</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>C01</td>
 <td>Assign volume units to compartments</td>
@@ -692,6 +786,19 @@
 <td>Each compartment should be associated with a different PBPKO <a href="http://purl.obolibrary.org/obo/PBPKO_00446">compartment</a> class.</td>
 <td>Enables ontological clarity, prevents duplicate/misaligned semantics</td>
 </tr>
+</tbody>
+</table>
+<h2 id="species-annotation">Species annotation</h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Rule</th>
+<th>Description</th>
+<th>Motivation</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>S01</td>
 <td>Assign amount units to species</td>
@@ -716,6 +823,19 @@
 <td>All species should be linked to a compartment.</td>
 <td>Ensures structural clarity</td>
 </tr>
+</tbody>
+</table>
+<h2 id="parameter-annotation">Parameter annotation</h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Rule</th>
+<th>Description</th>
+<th>Motivation</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>P01</td>
 <td>Assign units to parameters</td>
@@ -739,49 +859,6 @@
 <td>Params in biochem/physicochem class must also have ChEBI (BQB_IS)</td>
 <td>All parameter associated with a <a href="http://purl.obolibrary.org/obo/PBPKO_00139">biochemical parameter</a> or <a href="http://purl.obolibrary.org/obo/PBPKO_00126">physicochemical parameter</a> class of the <a href="https://github.com/InSilicoVida-Research-Lab/pbpko">PBPK ontology</a> (see <strong>P02</strong>) should have a <a href="https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers">BQB_IS</a> MIRIAM element annotation linking them to one of the <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> chemical identifiers defined for the model (see <strong>M06</strong>).</td>
 <td>Enables semantic interoperability by connecting parameter to chemical identity</td>
-</tr>
-</tbody>
-</table>
-<h2 id="reusability">Reusability</h2>
-<table>
-<thead>
-<tr>
-<th>Rule</th>
-<th>Rule</th>
-<th>Description</th>
-<th>Motivation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>REU01</td>
-<td>Clear usage license</td>
-<td>Models must be distributed under a clear, accessible, and preferably open license (e.g., CC-BY, CC0, MIT).</td>
-<td>Ensures legal clarity for reuse and derivative works.</td>
-</tr>
-<tr>
-<td>REU02</td>
-<td>Provenance documentation</td>
-<td>Metadata must describe the origin of the model, including data sources, assumptions, and modeling methods.</td>
-<td>Allows others to trust, validate, and build upon the model.</td>
-</tr>
-<tr>
-<td>REU03</td>
-<td>Domain standards compliance</td>
-<td>By complying to the FAIR PBK standard, models adhere to community standards.</td>
-<td>Promotes interoperability and long-term usability.</td>
-</tr>
-<tr>
-<td>REU04</td>
-<td>Versioning</td>
-<td>Each model release must have a version identifier, with changelogs describing differences from prior versions. Each version should have its own unique identifier (see FND02).</td>
-<td>Supports reproducibility and long-term research integrity.</td>
-</tr>
-<tr>
-<td>REU05</td>
-<td>Documentation of intended use</td>
-<td>Model metadata must include statements of scope, limitations, and intended application domains.</td>
-<td>Helps users assess whether the model fits their research needs.</td>
 </tr>
 </tbody>
 </table>

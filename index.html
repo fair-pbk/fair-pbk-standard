@@ -231,6 +231,63 @@
   
   
     <li class="md-tabs__item">
+      <a href="use_in_FIP/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Use in FIP
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="example/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Example
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="resources/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="about/" class="md-tabs__link">
         
   
@@ -363,20 +420,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope" class="md-nav__link">
+  <a href="#short-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Scope
+      Short summary
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#at-a-glance" class="md-nav__link">
+  <a href="#scope" class="md-nav__link">
     <span class="md-ellipsis">
-      At a glance
+      Scope
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-standard-for-model-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      A standard for model definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-of-fair" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part of FAIR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -401,6 +482,72 @@
   
   <span class="md-ellipsis">
     Specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="use_in_FIP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use in FIP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Example
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resources
     
   </span>
   
@@ -470,20 +617,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope" class="md-nav__link">
+  <a href="#short-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Scope
+      Short summary
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#at-a-glance" class="md-nav__link">
+  <a href="#scope" class="md-nav__link">
     <span class="md-ellipsis">
-      At a glance
+      Scope
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-standard-for-model-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      A standard for model definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-of-fair" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part of FAIR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -509,48 +680,18 @@
 
 
 <h1 id="fair-pbk-standard">FAIR PBK Standard</h1>
-<p>Physiologically Based Kinetic (PBK) models are models for simulating the absorption, distribution, metabolism, and excretion of chemicals in living systems. To maximize their impact, PBK models should not only be scientifically sound but also FAIR — Findable, Accessible, Interoperable, and Reusable. The <strong>FAIR PBK standard</strong> provides <strong>a structured set of rules for publishing PBK models</strong> in a way that ensures long-term (re)usability. These rules cover technical aspects (e.g., file formats, metadata, annotations) and contextual aspects (e.g., provenance, licensing, documentation). By following this standard standard, PBK model developers ensure their work is transparent, reproducible, and reusable for future applications.</p>
+<p>Physiologically Based Kinetic (PBK) models are models for simulating the absorption, distribution, metabolism, and excretion of chemicals in living systems. To maximize their impact, PBK models should not only be scientifically sound but also FAIR — Findable, Accessible, Interoperable, and Reusable. The <strong>FAIR PBK standard</strong> provides <strong>a structured set of rules for publishing PBK models</strong>. By following this standard standard, PBK model developers ensure their model code is transparent, reproducible, and reusable for future applications.</p>
 <h2 id="guiding-principle">Guiding principle</h2>
-<p>A guiding principle of the FAIR PBK standard is the acknowledgment that developers are, and always will be, using different modelling software and coding standards when creating PBK models. The standard is not intended to replace how PBK models are developed and implemented, but rather to provide a harmonized framework for publishing them, making models easier for other developers to reuse. For this, the FAIR PBK standard adopts the <a href="https://sbml.org/">Systems Biology Markup Language (SBML)</a> as a common/harmonized exchange format, complemented with rules for annotating model units and model elements.</p>
+<p>A guiding principle of the FAIR PBK standard is the acknowledgment that developers are, and always will be, using different modelling software and coding standards when creating PBK models. The standard is not intended to replace how PBK models are developed and implemented, but rather to provide a harmonized framework for publishing them, making models easier for other developers to reuse.</p>
 <p>The figure below illustrates the workflow for PBK model developers and model users. PBK model developers, on the left of the figure, develop models using the modelling software/language of their own preference. When publishing (versions of) developed PBK models, the modellers can convert their model to an annotated FAIR PBK model to make it interoperable and reusable, and publish it on a repository to make it findable and accessible. Model (re)users can, on the right side of the figure, can find and access models via the repositories, and import and use the interoperable and reusable format within their own environment.</p>
 <p><img alt="alt text" src="FAIR_PBK_workflow.png" title="FAIR PBK workflow" /></p>
+<h2 id="short-summary">Short summary</h2>
+<p>To achieve a high level of interoperability and reusability, key elements of the FAIR PBK standard are the use of the <a href="https://sbml.org/">Systems Biology Markup Language (SBML)</a> as harmonized, technical exchange format, complemented with specific rules for annotation of units and model elements. For specification of the model units and its RDF-based annotation system—utilizing MIRIAM standards—is employed to annotate model elements. For the latter, however, specific rules are provided on what to annotate and what ontologies to use. That is, all model elements should be annotated (or labelled with) specific terms from the <a href="https://insilicovida-research-lab.github.io/pbpko/">PBPKO ontology</a>, the chemical applicability domain and the chemical identifiers of chemical-specific model elements shoud be annotated using the <a href="https://www.ebi.ac.uk/chebi">ChEBI ontology</a>, and the modelled (animal) species should be specified using the <a href="https://www.ncbi.nlm.nih.gov/taxonomy">NCBI Taxonomy</a>. For the complete set of rules specifying the FAIR PBK standard, see the <a href="specification/">full specification</a></p>
 <h2 id="scope">Scope</h2>
+<h3 id="a-standard-for-model-definitions">A standard for model definitions</h3>
 <p>The FAIR standard applies to PBK model definitions — the structural representations of the models. It does not cover specific parametrisations (i.e., specific values for parameters like physiological parameters and partition coefficients) and dosing scenarios. Because of this, PBK models following the standard are flexible and reusable across diverse dosing and parametrisation scenarios.</p>
-<h2 id="at-a-glance">At a glance</h2>
-<p>To achieve a high level of interoperability and reusability, the central elements of the FAIR PBK standard are the use of the <a href="https://sbml.org/">Systems Biology Markup Language (SBML)</a> as harmonized, technical exchange format, complemented with specific rules for annotation of units and model elements. For specification of the model units, SBML's built-in framework is used and the RDF-based framework of SBML is employed to annotate model elements. For the latter, however, specific rules are provided on what to annotate and what ontologies to use. That is, all model elements should be annotated (or labelled with) specific terms from the PBPKO ontology, the chemical applicability domain and the chemical identifiers of chemical-specific model elements shoud be annotated using the ChEBI ontology, and the modelled (animal) species should be specified using the NCBI Taxonomy.</p>
-<p>To assure findability and accessibility of PBK model implementations, the FAIR PBK follows common standard FAIR practices. Essentially, to assure findability and accessibility, published PBK models should be identifiable with a persistent identifier (DOI), and be available via publicly accessible, recognized repositories (e.g., Zenodo, BioModels). Metadata such as title, authors, and description should be included in the SBML file, and all model and model-element annotations are also considered part of the metadata. The latter enables highly specific searches, e.g., to find models including specific compartments and/or models designed for specific chemicals/animal species.</p>
-<p>The table below summarizes the key elements of the FAIR PBK standard for each FAIR principle. For the complete guidelines, see the <a href="specification/">full specification</a>.</p>
-<table>
-<thead>
-<tr>
-<th>FAIR principle</th>
-<th>Guideline</th>
-<th>How to achieve</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Findability</strong></td>
-<td>Each (version of a) PBK model should be identifiable with a persistent identifier and deposited in searchable repositories.</td>
-<td>Assign a DOI or persistent identifier, deposit in recognized repositories (e.g., BioModels, Zenodo), and include metadata with title, authors, keywords, and version.</td>
-</tr>
-<tr>
-<td><strong>Accessibility</strong></td>
-<td>Models must be retrievable via open protocols and have clear licensing and access conditions.</td>
-<td>Make the model downloadable via a web link (e.g., by publishing on Zenodo), provide clear access instructions, include a standard license (e.g., CC-BY, MIT), and ensure metadata (title, authors, keywords, version) remains accessible even if the model file moves or changes.</td>
-</tr>
-<tr>
-<td><strong>Interoperability</strong></td>
-<td>Models should be compatible with software and other datasets.</td>
-<td>Publish in SBML with defined units, avoid hard-coded dosing, annotate using PBPKO ontology, ChEBI chemical IDs, and NCBI Taxonomy IDs to ensure machine-readable annotations.</td>
-</tr>
-<tr>
-<td><strong>Reusability</strong></td>
-<td>Models need clear licenses, provenance, versioning, and documentation of intended use.</td>
-<td>Provide an open license, version control, detailed documentation of model purpose, assumptions, parameter sources, simulation protocols, and compliance with community standards; include metadata tracing model derivation.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="part-of-fair">Part of FAIR</h3>
+<p>The FAIR PBK standard itself is not a complete specification for all aspects of FAIR — focusing mainly on interoperability and reusability. However, it can be included as part of a broader FAIR specification, or FAIR implementation profile (see <a href="use_in_FIP/">use in FIP</a>).</p>
 
 
 
