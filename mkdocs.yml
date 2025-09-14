@@ -9,6 +9,9 @@ edit_uri: blob/main/docs/
 nav:
   - Home: index.md
   - Specification: specification.md
+  - Use in FIP: use_in_FIP.md
+  - Example: example.md
+  - Resources: resources.md
   - About: about.md
 
 theme:
@@ -38,7 +41,9 @@ theme:
 extra_css:
   - css/extra.css
 
-plugins: []
+plugins:
+  - macros:
+      include_dir: include
 
 extra:
   version:

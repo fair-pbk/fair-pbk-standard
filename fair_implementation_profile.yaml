@@ -1,0 +1,96 @@
+# FAIR Implementation Profile (FIP) for PBK Models
+# Defines how FAIR principles are concretely implemented in PBK modeling
+
+profile: FAIR PBK Model Implementation
+version: 1.0
+
+principles:
+  - id: F1
+    category: findability
+    principle: "(Meta)data are assigned a globally unique and persistent identifier."
+    implementation: "Each PBK model must have a persistent identifier (e.g., DOI from Zenodo)."
+    part_of_standard: "No"
+
+  - id: F2
+    category: findability
+    principle: "Data are described with rich metadata (defined by R1)."
+    implementation: "A FAIR PBK model implementation (SBML file) must be accompanied by machine-readable metadata (e.g., JSON-LD), including title, description, version, authors (with ORCID), license, applicability domain, compartments, and parameters."
+    part_of_standard: "Partially. The FAIR PBK standard itself does not prescribe how to provide accompanying metadata, but it does specify rules for annotating the SBML model itself, which contributes to rich metadata. The title, authors (with ORCID), applicability domain, compartments, and parameters must should match (or be extracted from) with the SBML model annotations."
+
+  - id: F3
+    category: findability
+    principle: "Metadata clearly and explicitly include the identifier of the data they describe."
+    implementation: "The metadata file must include the model identifier (e.g., DOI) and explicitly link it to the SBML file."
+    part_of_standard: "No"
+
+  - id: F4
+    category: findability
+    principle: "(Meta)data are registered or indexed in a searchable resource."
+    implementation: "A FAIR PBK model implementation must be deposited in a recognized repository (e.g., BioModels, Zenodo) that provides indexing and search capabilities."
+    part_of_standard: "No"
+
+  - id: A1
+    category: accessibility
+    principle: "(Meta)data are retrievable by their identifier using a standardised communications protocol."
+    implementation: "A FAIR PBK model implementation must be retrievable via a stable HTTP(S) link from the repository."
+    part_of_standard: "No"
+
+  - id: A1.1
+    category: accessibility
+    principle: "The protocol is open, free, and universally implementable."
+    implementation: "The repository on which A FAIR PBK model is hosted should provide download access through openly accessible HTTP(S) endpoints."
+    part_of_standard: "No"
+
+  - id: A1.2
+    category: interoperability
+    principle: "The protocol allows for an authentication and authorisation procedure, where necessary."
+    implementation: "Repositories may support optional authentication for restricting access to a FAIR PBK model implementation, but metadata must always remain accessible."
+    part_of_standard: "No"
+
+  - id: A2
+    category: interoperability
+    principle: "Metadata are accessible, even when the data are no longer available."
+    implementation: "Metadata must remain persistent in repositories, even if the model file is deprecated or withdrawn."
+    part_of_standard: "No"
+
+  - id: I1
+    category: interoperability
+    principle: "(Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation."
+    implementation: "A FAIR PBK model implementation must be published in SBML Level 3 Version 2 (or higher). Metadata should be in a standard format (e.g., JSON-LD, RDF)."
+    part_of_standard: "Partially. The use of SBML Level 3 Version 2 (or higher) is part of the FAIR PBK standard."
+
+  - id: I2
+    category: interoperability
+    principle: "Data use vocabularies that follow FAIR principles."
+    implementation: "The FAIR PBK standard prescribes the use of specific vocabularies (PBPKO, ChEBI, NCBI taxonomy) that follow the FAIR principles."
+    part_of_standard: "Yes. A PBK model implementation that complies to the FAIR PBK standard inherently fulfills this principle."
+
+  - id: I3
+    category: interoperability
+    principle: "(Meta)data include qualified references to other (meta)data."
+    implementation: "Annotations in SBML must use RDF-based MIRIAM qualifiers to link model elements to ontology identifiers and external resources."
+    part_of_standard: "Yes. A PBK model implementation that complies to the FAIR PBK standard inherently fulfills this principle."
+
+  - id: R1
+    category: reusability
+    principle: "(Meta)data are richly described with a plurality of accurate and relevant attributes."
+    implementation: "PBK model metadata must include detailed applicability domain (species, chemicals), compartments, parameters, and provenance."
+    part_of_standard: "Yes. A PBK model implementation that complies to the FAIR PBK standard inherently fulfills this principle."
+
+  - id: R1.1
+    category: reusability
+    principle: "(Meta)data are released with a clear and accessible data usage license."
+    implementation: "Metadata must explicitly state the reuse license (e.g., CC-BY, MIT)."
+    part_of_standard: "No"
+
+  - id: R1.2
+    category: reusability
+    principle: "(Meta)data are associated with detailed provenance."
+    implementation: "Metadata must include references to related publications (DOI), original model code (if applicable), and development history."
+    part_of_standard: "No"
+
+  - id: R1.3
+    category: reusability
+    principle: "(Meta)data meet domain-relevant community standards."
+    implementation: "A FAIR PBK model implementation must comply with the FAIR PBK standard rules for SBML encoding and annotation."
+    part_of_standard: "Yes. The FAIR PBK standard is proposed as a community standard. A PBK model implementation that complies to the FAIR PBK standard inherently fulfills this principle."

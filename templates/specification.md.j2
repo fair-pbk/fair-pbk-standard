@@ -5,14 +5,14 @@ hide:
 
 # Specification
 
-{% for principle, rules in rules_by_principle.items() %}
-## {{ principle.title() }}
+The FAIR PBK standard sets out rules for publishing PBK model code as digital objects to promote interoperability and reusability. These rules are described below.
 
-| Rule | Rule | Description | Motivation |
+{% for category, rules in rules_by_category.items() %}
+## {{ category.capitalize() | replace("\n", " ") }}
+
+| ID | Rule | Description | Motivation |
 |------|------|-------------|------------|
 {% for rule in rules -%}
-| {{ rule.id }} | {{ rule.name }} | {{ rule.description | replace("\n", " ") }} | {{ rule.motivation }} |
+| **{{rule.id}}** | {{rule.name}} | {{rule.description|replace("\n", " ")}} | {{rule.motivation|replace("\n", " ")}} |
 {% endfor %}
-
 {% endfor %}
-

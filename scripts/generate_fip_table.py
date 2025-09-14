@@ -3,26 +3,20 @@ from jinja2 import Environment, FileSystemLoader
 from collections import defaultdict
 
 # Load YAML
-with open("specification.yaml", "r") as f:
+with open("fair_implementation_profile.yaml", "r") as f:
     data = yaml.safe_load(f)
-
-# Group rules by FAIR principle
-rules_by_category = defaultdict(list)
-for rule in data["rules"]:
-    fair = rule.get("category", "unknown")
-    rules_by_category[fair].append(rule)
 
 # Load Jinja2 template from file
 env = Environment(loader=FileSystemLoader("."))
-template = env.get_template("templates/specification.md.j2")
+template = env.get_template("templates/fip_table.md.j2")
 
 # Render markdown
 output_md = template.render(
-    rules_by_category=rules_by_category
+    principles=data["principles"]
 )
 
 # Save for MkDocs
-output_file = "docs/specification.md"
+output_file = "include/fip_table.md"
 with open(output_file, "w") as f:
     f.write(output_md)
 
