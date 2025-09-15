@@ -15,7 +15,7 @@ principles:
     category: findability
     principle: "Data are described with rich metadata (defined by R1)."
     implementation: "A FAIR PBK model implementation (SBML file) must be accompanied by machine-readable metadata (e.g., JSON-LD), including title, description, version, authors (with ORCID), license, applicability domain, compartments, and parameters."
-    part_of_standard: "Partially. The FAIR PBK standard itself does not prescribe how to provide accompanying metadata, but it does specify rules for annotating the SBML model itself, which contributes to rich metadata. The title, authors (with ORCID), applicability domain, compartments, and parameters must should match (or be extracted from) with the SBML model annotations."
+    part_of_standard: "Partially. The FAIR PBK standard itself does not prescribe how to provide accompanying metadata, but it does specify rules for annotating the SBML model itself, which contributes to rich metadata. The title, authors (with ORCID), applicability domain, compartments, and parameters should match (or be extracted from) with the SBML model annotations."
 
   - id: F3
     category: findability
@@ -93,4 +93,4 @@ principles:
     category: reusability
     principle: "(Meta)data meet domain-relevant community standards."
     implementation: "A FAIR PBK model implementation must comply with the FAIR PBK standard rules for SBML encoding and annotation."
-    part_of_standard: "Yes. The FAIR PBK standard is proposed as a community standard. A PBK model implementation that complies to the FAIR PBK standard inherently fulfills this principle."
+    part_of_standard: "Yes. In fact, the FAIR PBK standard is proposed as such a community standard. A PBK model implementation that complies to the FAIR PBK standard inherently fulfills this principle."
