@@ -11,7 +11,7 @@ The FAIR PBK standard sets out rules for publishing PBK model code as digital ob
 ## {{ category.capitalize() | replace("\n", " ") }}
 
 | ID | Rule | Description | Motivation |
-|------|------|-------------|------------|
+|----|------|-------------|------------|
 {% for rule in rules -%}
 | **{{rule.id}}** | {{rule.name}} | {{rule.description|replace("\n", " ")}} | {{rule.motivation|replace("\n", " ")}} |
 {% endfor %}

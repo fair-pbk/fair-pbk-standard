@@ -11,7 +11,13 @@ To illustrate the practical application of the FAIR PBK standard, the EuroMix ge
 
 The EuroMix generic PBK model was originally coded in the MCSim language and shared as supplementary material alongside the scientific paper presenting the model. The model was re-implemented in Antimony. Antimony was selected because it offers robust tools for converting models to and from SBML.
 
-To translate to Antimony, differential equations were manually converted to transfer equations, used in Antimony. In order to comply with criterion G01, all hardcoded dosing parameters of the original implementation were excluded from the model.
+To translate the model to Antimony, the differential equations were manually converted to transfer equations as used in Antimony. The names of the model elements were kept consistent with the original implementation wherever possible, facilitating comparison between the original MCSim model and the Antimony re-implementation.
+
+The 13 states of the MCSim model were mapped to chemical species in the Antimony, which were arranged into 12 compartments, with the liver compartment containing two species (modelling the amount of the chemical and the amount metabolized in the liver).
+
+Internal model parameters/variables tracking the compartment volumes were mapped to the compartments themselves, which represent physical volumes in Antimony/SBML. Also the parameters and internal assignments were translated, as much as possible, in a one-to-one manner to parameters in the Antimony re-implementation. However, in order to comply with criterion G01, all hardcoded dosing parameters of the original implementation were excluded from the model.
+
+![alt text](EuroMix_Generic_PBK_Reimplementation.svg "EuroMix PBK Re-implementation")
 
 ## Model annotation
 

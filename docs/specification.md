@@ -11,7 +11,7 @@ The FAIR PBK standard sets out rules for publishing PBK model code as digital ob
 ## File format
 
 | ID | Rule | Description | Motivation |
-|------|------|-------------|------------|
+|----|------|-------------|------------|
 | **F01** | Use SBML L3 v2+ XML | PBK model implementations should be published in *xml* file format using the [Systems Biology Markup Language (SBML)](https://sbml.org/) level 3 version 2 or higher. | Widely supported, machine-readable |
 | **F02** | Annotate model and elements with SBML annotation scheme | The model and model elements described by the SBML file should be annotated using the therefore available annotation scheme (see [SBML specification](https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2)). | Enables semantic clarity and interoperability |
 | **F03** | Specify units via SBML unit definitions | The units of the model and model elements described by the SBML file should specified using the therefore available system for unit definitions (see [SBML specification](https://identifiers.org/combine.specifications:sbml.level-3.version-2.core.release-2)). | Ensures consistency accross tools and prevents scaling/interpretation errors |
@@ -20,7 +20,7 @@ The FAIR PBK standard sets out rules for publishing PBK model code as digital ob
 ## Model rules
 
 | ID | Rule | Description | Motivation |
-|------|------|-------------|------------|
+|----|------|-------------|------------|
 | **G01** | No hardcoded dosing parameters | The PBK model implementation should **NOT** contain parameters specifying the dosing. These should be added via events in model simulations. | Enables modular interoperability, avoids hardcoded study-specific assumptions |
 | **M01** | Define time resolution with timeUnits | The time resolution of the model should be specified via the model-level **timeUnits**. | Enables syntactic clarity, ensures correct temporal interpretation |
 | **M02** | Define amounts via substanceUnits | The amounts unit of the model should be specified via the model-level **substanceUnits**. | Enables semantic consistency, prevents unit ambiguity |
@@ -33,7 +33,7 @@ The FAIR PBK standard sets out rules for publishing PBK model code as digital ob
 ## Compartments annotation
 
 | ID | Rule | Description | Motivation |
-|------|------|-------------|------------|
+|----|------|-------------|------------|
 | **C01** | Assign volume units to compartments | All compartments should be assigned a unit representing a volume. | Enables syntactic clarity and quantitative scaling |
 | **C02** | Annotate with PBPK ontology (BQM_IS) | All compartments should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [compartment](http://purl.obolibrary.org/obo/PBPKO_00446) of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko). | Enables semantic interoperability by mapping model compartments to shared ontology |
 | **C03** | Unique PBPKO class for each compartment | Each compartment should be associated with a different PBPKO [compartment](http://purl.obolibrary.org/obo/PBPKO_00446) class. | Enables ontological clarity, prevents duplicate/misaligned semantics |
@@ -42,7 +42,7 @@ The FAIR PBK standard sets out rules for publishing PBK model code as digital ob
 ## Species annotation
 
 | ID | Rule | Description | Motivation |
-|------|------|-------------|------------|
+|----|------|-------------|------------|
 | **S01** | Assign amount units to species | All species should be assigned a unit representing an amount. | Enables numerical clarity, avoids ambiguous concentration vs. amount |
 | **S02** | Annotate with PBPK ontology (BQM_IS) | All species should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [output parameter](http://purl.obolibrary.org/obo/PBPKO_00252) of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko). | Enables semantic clarity by linking to ontology-defined output parameter |
 | **S03** | Annotate with ChEBI chemical (BQB_IS) | All species should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to one of the [ChEBI](https://www.ebi.ac.uk/chebi/) chemical identifiers defined for the model (see **M06**). | Enables semantic interoperability, ensures consistent chemical reference |
@@ -52,7 +52,7 @@ The FAIR PBK standard sets out rules for publishing PBK model code as digital ob
 ## Parameter annotation
 
 | ID | Rule | Description | Motivation |
-|------|------|-------------|------------|
+|----|------|-------------|------------|
 | **P01** | Assign units to parameters | All parameters should be assigned a unit. | Enables numerical consistency and prevents scaling errors |
 | **P02** | Annotate with PBPK ontology (BQM_IS) | All parameters should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a parameter of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko). | Enables semantic clarity by linking to ontology-defined parameter type |
 | **P03** | Unique PBPKO class for each parameter | Each parameter should be associated with a different PBPKO [parameter](http://purl.obolibrary.org/obo/PBPKO_00002) class. | Enables ontological clarity, avoids semantic overlap |
