@@ -13,10 +13,6 @@
         <link rel="canonical" href="https://jwkruisselbrink.github.io/fair-pbk/example/">
       
       
-        <link rel="prev" href="../use_in_FIP/">
-      
-      
-        <link rel="next" href="../resources/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -248,27 +244,6 @@
   
   
   
-    
-  
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Example
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
   
     <li class="md-tabs__item">
       <a href="../resources/" class="md-tabs__link">
@@ -426,106 +401,6 @@
       
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Example
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Example
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#re-implementation-in-antimony" class="md-nav__link">
-    <span class="md-ellipsis">
-      Re-implementation in Antimony
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-annotation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Model annotation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sbml-conversion" class="md-nav__link">
-    <span class="md-ellipsis">
-      SBML conversion
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publication-on-zenodo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Publication on Zenodo
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
   
   
     <li class="md-nav__item">
@@ -655,7 +530,10 @@
 <p>To illustrate the practical application of the FAIR PBK standard, the EuroMix generic PBK model from <a href="https://doi.org/10.1016/j.fct.2020.111440">Tebby et al. (2020)</a> was re-implemented in compliance with the standard. A brief description of this re-implementation is provided below. The full model code is available on <a href="https://github.com/rivm-syso/euromix-to-sbml">GitHub</a>.</p>
 <h2 id="re-implementation-in-antimony">Re-implementation in Antimony</h2>
 <p>The EuroMix generic PBK model was originally coded in the MCSim language and shared as supplementary material alongside the scientific paper presenting the model. The model was re-implemented in Antimony. Antimony was selected because it offers robust tools for converting models to and from SBML.</p>
-<p>To translate to Antimony, differential equations were manually converted to transfer equations, used in Antimony. In order to comply with criterion G01, all hardcoded dosing parameters of the original implementation were excluded from the model.</p>
+<p>To translate the model to Antimony, the differential equations were manually converted to transfer equations as used in Antimony. The names of the model elements were kept consistent with the original implementation wherever possible, facilitating comparison between the original MCSim model and the Antimony re-implementation.</p>
+<p>The 13 states of the MCSim model were mapped to chemical species in the Antimony, which were arranged into 12 compartments, with the liver compartment containing two species (modelling the amount of the chemical and the amount metabolized in the liver).</p>
+<p>Internal model parameters/variables tracking the compartment volumes were mapped to the compartments themselves, which represent physical volumes in Antimony/SBML. Also the parameters and internal assignments were translated, as much as possible, in a one-to-one manner to parameters in the Antimony re-implementation. However, in order to comply with criterion G01, all hardcoded dosing parameters of the original implementation were excluded from the model.</p>
+<p><img alt="alt text" src="../EuroMix_Generic_PBK_Reimplementation.svg" title="EuroMix PBK Re-implementation" /></p>
 <h2 id="model-annotation">Model annotation</h2>
 <p>Annotations of the model and its element are specified in a separate CSV file. This annotations file links the different model elements (e.g., compartments and parameters) to ontological terms and specifies the units of measure Although the Antimony language also allows specification of units and annotations in the model code itself, maintaining these in a separate CSV file makes the code better readible.</p>
 <h2 id="sbml-conversion">SBML conversion</h2>

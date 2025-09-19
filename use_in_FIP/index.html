@@ -16,7 +16,7 @@
         <link rel="prev" href="../specification/">
       
       
-        <link rel="next" href="../example/">
+        <link rel="next" href="../resources/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -247,25 +247,6 @@
   
   
     <li class="md-tabs__item">
-      <a href="../example/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Example
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
       <a href="../resources/" class="md-tabs__link">
         
   
@@ -432,28 +413,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../example/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Example
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../resources/" class="md-nav__link">
         
   
@@ -544,94 +503,94 @@
 </thead>
 <tbody>
 <tr>
-<td>F1</td>
+<td><strong>F1</strong></td>
 <td>(Meta)data are assigned a globally unique and persistent identifier.</td>
 <td>Each PBK model must have a persistent identifier (e.g., DOI from Zenodo).</td>
 <td>No</td>
 </tr>
 <tr>
-<td>F2</td>
+<td><strong>F2</strong></td>
 <td>Data are described with rich metadata (defined by R1).</td>
 <td>A FAIR PBK model implementation (SBML file) must be accompanied by machine-readable metadata (e.g., JSON-LD), including title, description, version, authors (with ORCID), license, applicability domain, compartments, and parameters.</td>
-<td>Partially. The FAIR PBK standard itself does not prescribe how to provide accompanying metadata, but it does specify rules for annotating the SBML model itself, which contributes to rich metadata. The title, authors (with ORCID), applicability domain, compartments, and parameters must should match (or be extracted from) with the SBML model annotations.</td>
+<td>Partially. The FAIR PBK standard itself does not prescribe how to provide accompanying metadata, but it does specify rules for annotating the SBML model itself, which contributes to rich metadata. The title, authors (with ORCID), applicability domain, compartments, and parameters should match (or be extracted from) with the SBML model annotations.</td>
 </tr>
 <tr>
-<td>F3</td>
+<td><strong>F3</strong></td>
 <td>Metadata clearly and explicitly include the identifier of the data they describe.</td>
 <td>The metadata file must include the model identifier (e.g., DOI) and explicitly link it to the SBML file.</td>
 <td>No</td>
 </tr>
 <tr>
-<td>F4</td>
+<td><strong>F4</strong></td>
 <td>(Meta)data are registered or indexed in a searchable resource.</td>
 <td>A FAIR PBK model implementation must be deposited in a recognized repository (e.g., BioModels, Zenodo) that provides indexing and search capabilities.</td>
 <td>No</td>
 </tr>
 <tr>
-<td>A1</td>
+<td><strong>A1</strong></td>
 <td>(Meta)data are retrievable by their identifier using a standardised communications protocol.</td>
 <td>A FAIR PBK model implementation must be retrievable via a stable HTTP(S) link from the repository.</td>
 <td>No</td>
 </tr>
 <tr>
-<td>A1.1</td>
+<td><strong>A1.1</strong></td>
 <td>The protocol is open, free, and universally implementable.</td>
 <td>The repository on which A FAIR PBK model is hosted should provide download access through openly accessible HTTP(S) endpoints.</td>
 <td>No</td>
 </tr>
 <tr>
-<td>A1.2</td>
+<td><strong>A1.2</strong></td>
 <td>The protocol allows for an authentication and authorisation procedure, where necessary.</td>
 <td>Repositories may support optional authentication for restricting access to a FAIR PBK model implementation, but metadata must always remain accessible.</td>
 <td>No</td>
 </tr>
 <tr>
-<td>A2</td>
+<td><strong>A2</strong></td>
 <td>Metadata are accessible, even when the data are no longer available.</td>
 <td>Metadata must remain persistent in repositories, even if the model file is deprecated or withdrawn.</td>
 <td>No</td>
 </tr>
 <tr>
-<td>I1</td>
+<td><strong>I1</strong></td>
 <td>(Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.</td>
 <td>A FAIR PBK model implementation must be published in SBML Level 3 Version 2 (or higher). Metadata should be in a standard format (e.g., JSON-LD, RDF).</td>
 <td>Partially. The use of SBML Level 3 Version 2 (or higher) is part of the FAIR PBK standard.</td>
 </tr>
 <tr>
-<td>I2</td>
+<td><strong>I2</strong></td>
 <td>Data use vocabularies that follow FAIR principles.</td>
 <td>The FAIR PBK standard prescribes the use of specific vocabularies (PBPKO, ChEBI, NCBI taxonomy) that follow the FAIR principles.</td>
 <td>Yes. A PBK model implementation that complies to the FAIR PBK standard inherently fulfills this principle.</td>
 </tr>
 <tr>
-<td>I3</td>
+<td><strong>I3</strong></td>
 <td>(Meta)data include qualified references to other (meta)data.</td>
 <td>Annotations in SBML must use RDF-based MIRIAM qualifiers to link model elements to ontology identifiers and external resources.</td>
 <td>Yes. A PBK model implementation that complies to the FAIR PBK standard inherently fulfills this principle.</td>
 </tr>
 <tr>
-<td>R1</td>
+<td><strong>R1</strong></td>
 <td>(Meta)data are richly described with a plurality of accurate and relevant attributes.</td>
 <td>PBK model metadata must include detailed applicability domain (species, chemicals), compartments, parameters, and provenance.</td>
 <td>Yes. A PBK model implementation that complies to the FAIR PBK standard inherently fulfills this principle.</td>
 </tr>
 <tr>
-<td>R1.1</td>
+<td><strong>R1.1</strong></td>
 <td>(Meta)data are released with a clear and accessible data usage license.</td>
 <td>Metadata must explicitly state the reuse license (e.g., CC-BY, MIT).</td>
 <td>No</td>
 </tr>
 <tr>
-<td>R1.2</td>
+<td><strong>R1.2</strong></td>
 <td>(Meta)data are associated with detailed provenance.</td>
 <td>Metadata must include references to related publications (DOI), original model code (if applicable), and development history.</td>
 <td>No</td>
 </tr>
 <tr>
-<td>R1.3</td>
+<td><strong>R1.3</strong></td>
 <td>(Meta)data meet domain-relevant community standards.</td>
 <td>A FAIR PBK model implementation must comply with the FAIR PBK standard rules for SBML encoding and annotation.</td>
-<td>Yes. The FAIR PBK standard is proposed as a community standard. A PBK model implementation that complies to the FAIR PBK standard inherently fulfills this principle.</td>
+<td>Yes. In fact, the FAIR PBK standard is proposed as such a community standard. A PBK model implementation that complies to the FAIR PBK standard inherently fulfills this principle.</td>
 </tr>
 </tbody>
 </table>
