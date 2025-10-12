@@ -1,0 +1,23 @@
+| Property | Value |
+|----------|-------|
+{% for term in ncbitaxon_terms %}
+    {%- if loop.first -%}
+| **Modelled species/orgamism(s)** | {{term}} |
+    {%- else -%}
+|                                  | {{term}} |
+    {%- endif %}
+{% endfor -%}
+{% for term in chebi_terms %}
+    {%- if loop.first -%}
+| **Model chemical(s)**            | {{term}} |
+    {%- else -%}
+|                                  | {{term}} |
+    {%- endif %}
+{% endfor -%}
+| **Time resolution**              | {{model_info.time_unit}}                 |
+| **Amounts unit**                 | {{model_info.amounts_unit}}              |
+| **Volume unit**                  | {{model_info.volume_unit}}               |
+| **Extent unit**                  | {{model_info.extent_unit}}               |
+| **Number of compartments**       | {{model_info.num_compartments}}          |
+| **Number of species**            | {{model_info.num_species}}               |
+| **Number of parameters**         | {{model_info.num_external_parameters}}   |

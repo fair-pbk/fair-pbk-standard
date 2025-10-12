@@ -1,6 +1,5 @@
 import yaml
 from jinja2 import Environment, FileSystemLoader
-from collections import defaultdict
 
 # Load YAML
 with open("fair_implementation_profile.yaml", "r") as f:

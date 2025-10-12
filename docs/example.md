@@ -7,26 +7,46 @@ hide:
 
 To illustrate the practical application of the FAIR PBK standard, the EuroMix generic PBK model from [Tebby et al. (2020)](https://doi.org/10.1016/j.fct.2020.111440) was re-implemented in compliance with the standard. A brief description of this re-implementation is provided below. The full model code is available on [GitHub](https://github.com/rivm-syso/euromix-to-sbml).
 
-## Re-implementation in Antimony
+![alt text](EuroMix_Generic_PBK_Reimplementation.svg "EuroMix PBK Re-implementation")
 
-The EuroMix generic PBK model was originally coded in the MCSim language and shared as supplementary material alongside the scientific paper presenting the model. The model was re-implemented in Antimony. Antimony was selected because it offers robust tools for converting models to and from SBML.
+## Re-implementation in Antimony
 
 To translate the model to Antimony, the differential equations were manually converted to transfer equations as used in Antimony. The names of the model elements were kept consistent with the original implementation wherever possible, facilitating comparison between the original MCSim model and the Antimony re-implementation.
 
-The 13 states of the MCSim model were mapped to chemical species in the Antimony, which were arranged into 12 compartments, with the liver compartment containing two species (modelling the amount of the chemical and the amount metabolized in the liver).
+The 13 states of the MCSim model were mapped to chemical species in the Antimony, which were arranged into 12 compartments, with the liver compartment containing two species (modelling the amount of the chemical and the amount metabolized in the liver). Internal model parameters/variables tracking the compartment volumes were mapped to the compartments themselves, which represent physical volumes in Antimony/SBML. Also the parameters and internal assignments were translated, as much as possible, in a one-to-one manner to parameters in the Antimony re-implementation. However, in order to comply with criterion G01 of the standard, all hardcoded dosing parameters of the original implementation were excluded from the model.
 
-Internal model parameters/variables tracking the compartment volumes were mapped to the compartments themselves, which represent physical volumes in Antimony/SBML. Also the parameters and internal assignments were translated, as much as possible, in a one-to-one manner to parameters in the Antimony re-implementation. However, in order to comply with criterion G01, all hardcoded dosing parameters of the original implementation were excluded from the model.
+The converted Antimony model file can be found [here](https://github.com/rivm-syso/euromix-to-sbml/blob/main/model/euromix.ant).
 
-![alt text](EuroMix_Generic_PBK_Reimplementation.svg "EuroMix PBK Re-implementation")
+## SBML conversion and model annotation
 
-## Model annotation
+Conversion of the Antimony model implementation to an SBML file is done automatically using native functionality of [libAntimony](https://github.com/sys-bio/antimony/). Although the Antimony language supports specifying units and annotations directly within the model code, these have been omitted from the Antimony re-implementation to enhance readability of the model code. Therefore, the converted SBML file does not yet include proper annotations.
 
-Annotations of the model and its element are specified in a separate CSV file. This annotations file links the different model elements (e.g., compartments and parameters) to ontological terms and specifies the units of measure Although the Antimony language also allows specification of units and annotations in the model code itself, maintaining these in a separate CSV file makes the code better readible.
+All annotations are provided in a separate [CSV file](https://github.com/rivm-syso/euromix-to-sbml/blob/main/model/euromix.annotations.csv), which links model elements to ontological terms and specifies their units of measure. The converted SBML file is annotated using the small (experimental) python package [sbmlpbkutils](https://github.com/jwkruisselbrink/sbml-pbk-utils) using the annotations specified by CSV file.
 
-## SBML conversion
+The annotated, and FAIR PBK compliant SBML file can be found [here](https://github.com/rivm-syso/euromix-to-sbml/blob/main/model/euromix.sbml).
 
-Conversion to an annotated SBML file is done automatically using the SBML PBK workflow. This workflow follows several steps. It first converts the Antimony model implementation to SBML. Then, it annotates this SBML file using the annotations specified in the euromix.annotations.csv file. After this, it runs validation scripts on the generated SBML file to check for consistency and completeness (e.g, of the units). Finally, it publishes the generated SBML file (and log files) as build artifacts and adds/updates the generated/updated SBML file.
+## Open source development and archived releases
 
-## Publication on Zenodo
+The full model code is publicly available and maintained on [GitHub](https://github.com/rivm-syso/euromix-to-sbml). However, the FAIR digital resources are specific versioned releases of the annotated SBML file that are published and permanently archived on Zenodo.
 
-TODO
+TODO: publish v1.0.0
+
+## Model info
+
+To demonstrate the power and completeness of the annotation standard, find below the general model info, and information on the compartments, (chemical) species, and parameters that can be extracted from the model.
+
+### General
+
+{% include 'model_infos_table.md' %}
+
+### Compartments
+
+{% include 'compartment_infos_table.md' %}
+
+### Species
+
+{% include 'species_infos_table.md' %}
+
+### Parameters
+
+{% include 'parameter_infos_table.md' %}

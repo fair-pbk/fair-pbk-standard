@@ -1,0 +1,5 @@
+| Element ID | Unit | BQM:IS Class | BQM:IS Label |
+|------------|------|--------------|--------------|
+{% for record in records -%}
+| **{{ record["id"] }}** | {{ record["unit"] }} | [{{ record["bqm_is_id"] }}]({{ record["bqm_is_iri"] }}) | {{ record["bqm_is_label"] }} |
+{% endfor %}
