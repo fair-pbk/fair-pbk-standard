@@ -1,9 +1,9 @@
 site_name: FAIR PBK standard
 site_description: A specification for creating interoperable and reusable PBK models.
-site_url: 'https://jwkruisselbrink.github.io/fair-pbk/'
+site_url: 'https://fair-pbk.github.io/fair-pbk-standard'
 site_dir: site/
-repo_url: 'https://github.com/jwkruisselbrink/fair-pbk'
-repo_name: jwkruisselbrink/fair-pbk
+repo_url: 'https://github.com/fair-pbk/fair-pbk-standard'
+repo_name: fair-pbk/fair-pbk-standard
 edit_uri: blob/main/docs/
 
 nav:
