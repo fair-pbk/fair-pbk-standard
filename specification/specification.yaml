@@ -68,7 +68,7 @@ rules:
 
   - id: C02
     name: "Annotate with PBPK ontology (BQM_IS)"
-    description: "All compartments should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [compartment](http://purl.obolibrary.org/obo/PBPKO_00446) of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko)."
+    description: "All compartments should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [compartment](http://purl.obolibrary.org/obo/PBPKO_00446) of the [PBPK ontology](https://insilicovida-research-lab.github.io/pbpko/)."
     category: compartments annotation
     motivation: "Enables semantic interoperability by mapping model compartments to shared ontology"
 
@@ -86,7 +86,7 @@ rules:
 
   - id: S02
     name: "Annotate with PBPK ontology (BQM_IS)"
-    description: "All species should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [output parameter](http://purl.obolibrary.org/obo/PBPKO_00252) of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko)."
+    description: "All species should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [output parameter](http://purl.obolibrary.org/obo/PBPKO_00252) of the [PBPK ontology](https://insilicovida-research-lab.github.io/pbpko/)."
     category: species annotation
     motivation: "Enables semantic clarity by linking to ontology-defined output parameter"
 
@@ -110,7 +110,7 @@ rules:
 
   - id: P02
     name: "Annotate with PBPK ontology (BQM_IS)"
-    description: "All parameters should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a parameter of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko)."
+    description: "All parameters should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a parameter of the [PBPK ontology](https://insilicovida-research-lab.github.io/pbpko/)."
     category: parameter annotation
     motivation: "Enables semantic clarity by linking to ontology-defined parameter type"
 
@@ -122,6 +122,6 @@ rules:
 
   - id: P04
     name: "Params in biochem/physicochem class must also have ChEBI (BQB_IS)"
-    description: "All parameter associated with a [biochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00139) or [physicochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00126) class of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko) (see **P02**) should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to one of the [ChEBI](https://www.ebi.ac.uk/chebi/) chemical identifiers defined for the model (see **M06**)."
+    description: "All parameter associated with a [biochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00139) or [physicochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00126) class of the [PBPK ontology](https://insilicovida-research-lab.github.io/pbpko/) (see **P02**) should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to one of the [ChEBI](https://www.ebi.ac.uk/chebi/) chemical identifiers defined for the model (see **M06**)."
     category: parameter annotation
     motivation: "Enables semantic interoperability by connecting parameter to chemical identity"

@@ -1,8 +1,3 @@
----
-hide:
-  - navigation
----
-
 # Specification
 
 The FAIR PBK standard sets out rules for publishing PBK model code as digital objects to promote interoperability and reusability. These rules are described below.
@@ -35,7 +30,7 @@ The FAIR PBK standard sets out rules for publishing PBK model code as digital ob
 | ID | Rule | Description | Motivation |
 |----|------|-------------|------------|
 | **C01** | Assign volume units to compartments | All compartments should be assigned a unit representing a volume. | Enables syntactic clarity and quantitative scaling |
-| **C02** | Annotate with PBPK ontology (BQM_IS) | All compartments should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [compartment](http://purl.obolibrary.org/obo/PBPKO_00446) of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko). | Enables semantic interoperability by mapping model compartments to shared ontology |
+| **C02** | Annotate with PBPK ontology (BQM_IS) | All compartments should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [compartment](http://purl.obolibrary.org/obo/PBPKO_00446) of the [PBPK ontology](https://insilicovida-research-lab.github.io/pbpko/). | Enables semantic interoperability by mapping model compartments to shared ontology |
 | **C03** | Unique PBPKO class for each compartment | Each compartment should be associated with a different PBPKO [compartment](http://purl.obolibrary.org/obo/PBPKO_00446) class. | Enables ontological clarity, prevents duplicate/misaligned semantics |
 
 
@@ -44,7 +39,7 @@ The FAIR PBK standard sets out rules for publishing PBK model code as digital ob
 | ID | Rule | Description | Motivation |
 |----|------|-------------|------------|
 | **S01** | Assign amount units to species | All species should be assigned a unit representing an amount. | Enables numerical clarity, avoids ambiguous concentration vs. amount |
-| **S02** | Annotate with PBPK ontology (BQM_IS) | All species should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [output parameter](http://purl.obolibrary.org/obo/PBPKO_00252) of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko). | Enables semantic clarity by linking to ontology-defined output parameter |
+| **S02** | Annotate with PBPK ontology (BQM_IS) | All species should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a [output parameter](http://purl.obolibrary.org/obo/PBPKO_00252) of the [PBPK ontology](https://insilicovida-research-lab.github.io/pbpko/). | Enables semantic clarity by linking to ontology-defined output parameter |
 | **S03** | Annotate with ChEBI chemical (BQB_IS) | All species should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to one of the [ChEBI](https://www.ebi.ac.uk/chebi/) chemical identifiers defined for the model (see **M06**). | Enables semantic interoperability, ensures consistent chemical reference |
 | **S04** | Link species to a compartment | All species should be linked to a compartment. | Ensures structural clarity |
 
@@ -54,7 +49,7 @@ The FAIR PBK standard sets out rules for publishing PBK model code as digital ob
 | ID | Rule | Description | Motivation |
 |----|------|-------------|------------|
 | **P01** | Assign units to parameters | All parameters should be assigned a unit. | Enables numerical consistency and prevents scaling errors |
-| **P02** | Annotate with PBPK ontology (BQM_IS) | All parameters should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a parameter of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko). | Enables semantic clarity by linking to ontology-defined parameter type |
+| **P02** | Annotate with PBPK ontology (BQM_IS) | All parameters should have a [BQM_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to a parameter of the [PBPK ontology](https://insilicovida-research-lab.github.io/pbpko/). | Enables semantic clarity by linking to ontology-defined parameter type |
 | **P03** | Unique PBPKO class for each parameter | Each parameter should be associated with a different PBPKO [parameter](http://purl.obolibrary.org/obo/PBPKO_00002) class. | Enables ontological clarity, avoids semantic overlap |
-| **P04** | Params in biochem/physicochem class must also have ChEBI (BQB_IS) | All parameter associated with a [biochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00139) or [physicochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00126) class of the [PBPK ontology](https://github.com/InSilicoVida-Research-Lab/pbpko) (see **P02**) should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to one of the [ChEBI](https://www.ebi.ac.uk/chebi/) chemical identifiers defined for the model (see **M06**). | Enables semantic interoperability by connecting parameter to chemical identity |
+| **P04** | Params in biochem/physicochem class must also have ChEBI (BQB_IS) | All parameter associated with a [biochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00139) or [physicochemical parameter](http://purl.obolibrary.org/obo/PBPKO_00126) class of the [PBPK ontology](https://insilicovida-research-lab.github.io/pbpko/) (see **P02**) should have a [BQB_IS](https://github.com/combine-org/combine-specifications/blob/main/specifications/qualifiers-1.1.md#model-qualifiers) MIRIAM element annotation linking them to one of the [ChEBI](https://www.ebi.ac.uk/chebi/) chemical identifiers defined for the model (see **M06**). | Enables semantic interoperability by connecting parameter to chemical identity |
 

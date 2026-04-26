@@ -1,0 +1,15 @@
+---
+hide:
+  - navigation
+---
+
+# Use in FIP
+
+The FAIR PBK standard is proposed as a harmonized framework for publishing PBK model implementations or model code. It is, however, not a complete specification for all aspects of FAIR as it focuses mainly on interoperability and reusability. Instead, it can be included as part of a broader FAIR specification or [FAIR implementation profile (FIP)](https://www.go-fair.org/how-to-go-fair/fair-implementation-profile/). The table below provides a proposal for such a FAIR specification and shows how the FAIR PBK standard contributes to implementation of the [FAIR principles](https://www.go-fair.org/fair-principles/).
+
+| Id | Description | Implementation | Part of PBK standard |
+|----|-------------|----------------|---------------------|
+{% for record in principles -%}
+| **{{ record.id }}** | {{ record.principle }} | {{ record.implementation }} | {{ record.part_of_standard }} |
+{% endfor %}
+

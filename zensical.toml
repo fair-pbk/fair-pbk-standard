@@ -1,0 +1,32 @@
+[project]
+site_name = "FAIR PBK standard"
+site_description = "FAIR PBK standard webpage."
+site_url = "https://fair-pbk.github.io/fair-pbk-standard"
+site_dir = "site/"
+docs_dir = "docs"
+repo_url = "https://github.com/fair-pbk/fair-pbk-standard"
+repo_name = "fair-pbk/fair-pbk-standard"
+edit_uri = "blob/main/docs"
+extra_css = ["css/extra.css"]
+markdown_extensions = [{"pymdownx.arithmatex" = { generic = true }}]
+extra_javascript = [
+  "https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js",
+  "js/tablesort.js"
+]
+nav = [
+  {"Home" = "index.md"},
+  {"Specification" = "specification.md"},
+  {"Use in FIP" = "fip.md"},
+  {"Resources" = "resources.md"},
+  {"About" = "about.md"},
+]
+
+[project.theme]
+name = "material"
+language = "en"
+features = [
+    "toc.integrate",
+    "navigation.tabs"
+]
+[project.theme.font]
+text = "Roboto"

@@ -8,7 +8,7 @@ principles:
   - id: F1
     category: findability
     principle: "(Meta)data are assigned a globally unique and persistent identifier."
-    implementation: "Each PBK model must have a persistent identifier (e.g., DOI from Zenodo)."
+    implementation: "Each PBK model must have a persistent identifier (e.g., a DOI or BioModels identifier)."
     part_of_standard: "No"
 
   - id: F2

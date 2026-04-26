@@ -1,20 +1,13 @@
----
-hide:
-  - navigation
----
-
-## FAIR enabling resources
-
 The following resources provide the building blocks of the FAIR PBK standard.
 
 ## Ontologies and standards
 
-The FAIR PBK standard builds upon existing standards and ontologies.
+The FAIR PBK standard builds upon the following existing standards and ontologies.
 
 | Resource | Description |
 |---|---|
 | [SBML](https://sbml.org/) | The Systems Biology Markup Language (SBML) is the selected harmonized exchange format for PBK models. |
-| [PBPKO](https://github.com/InSilicoVida-Research-Lab/pbpko) | Ontology for annotation of PBK model elements (compartments, species, parameters). |
+| [PBPKO](https://insilicovida-research-lab.github.io/pbpko/) | Ontology for annotation of PBK model elements (compartments, species, parameters). |
 | [ChEBI](https://www.ebi.ac.uk/chebi/) | Chemical Entities of Biological Interest: ontology for chemical identifiers. |
 | [NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy) | Database for controlled terminology of animal species. |
 
@@ -24,8 +17,8 @@ The tools in the table below support development of PBK models compliant with th
 
 | Resource | Description |
 |---|---|
+| [FAIR PBK Inspector](https://fair-pbk.wur.nl) | Online tool for annotating Antimony and SBML PBK model implementations to make them compliant with the FAIR PBK standard. |
 | [SBML PBK Utils](https://github.com/jwkruisselbrink/sbml-pbk-utils) | Small Python package with utilities for annotating, validating, and running SBML PBK models. |
-| [SBML PBK Workflow](https://github.com/jwkruisselbrink/sbml-pbk-workflow) | GitHub Actions workflow to generate annotated SBML files from Antimony PBK implementations using CSV annotations. |
 
 ## FAIR PBK models
 
