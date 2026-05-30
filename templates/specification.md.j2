@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Specification
 
 The FAIR PBK standard sets out rules for publishing PBK model code as digital objects to promote interoperability and reusability. These rules are described below.

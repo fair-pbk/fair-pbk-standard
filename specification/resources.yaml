@@ -1,0 +1,72 @@
+resource_groups:
+  - id: ontologies
+    title: Ontologies and standards
+    description: The FAIR PBK standard builds upon the following existing standards and ontologies.
+
+  - id: tools
+    title: FAIR PBK tools
+    description: Tools supporting development of PBK models compliant with the FAIR PBK standard.
+
+  - id: models
+    title: FAIR PBK models
+    description: Open source PBK models that are developed to comply with the FAIR PBK standard.
+
+  - id: generic
+    title: Generic tools and resources
+    description: Generic resources, not specific to the FAIR PBK standard, supporting development of FAIR PBK models.
+
+resources:
+  - title: SBML
+    description: The Systems Biology Markup Language (SBML) is the selected harmonized exchange format for PBK models.
+    url: https://sbml.org/
+    group: ontologies
+
+  - title: PBPKO
+    description: Ontology for annotation of PBK model elements (compartments, species, parameters).
+    url: https://insilicovida-research-lab.github.io/pbpko/
+    group: ontologies
+
+  - title: ChEBI
+    description: Chemical Entities of Biological Interest - ontology for chemical identifiers.
+    url: https://www.ebi.ac.uk/chebi/
+    group: ontologies
+
+  - title: NCBI Taxonomy
+    description: Database for controlled terminology of animal species.
+    url: https://www.ncbi.nlm.nih.gov/taxonomy
+    group: ontologies
+
+  - title: FAIR PBK Inspector
+    description: Online tool for annotating Antimony and SBML PBK model implementations to make them compliant with the FAIR PBK standard.
+    url: https://fair-pbk.wur.nl
+    group: tools
+
+  - title: SBML PBK Utils
+    description: Small Python package with utilities for annotating, validating, and running SBML PBK models.
+    url: https://github.com/jwkruisselbrink/sbml-pbk-utils
+    group: tools
+
+  - title: EuroMix PBK re-implementation
+    description: FAIR PBK re-implementation of the EuroMix PBK model in Antimony.
+    url: https://github.com/rivm-syso/euromix-to-sbml/
+    group: models
+
+  - title: PFAS PBK model
+    description: Antimony implementation of PFAS PBK kinetics based on Loccisano et al. (2011) with subsequent modifications by Westerhout et al. (2024).
+    url: https://github.com/rivm-syso/pfasPBK
+    group: models
+
+  - title: FAIR PBK Demonstration models
+    description: Collection of small Antimony PBK example models illustrating different modelling choices and translations to PBK implementations.
+    url: https://github.com/rivm-syso/pbk-demo-models
+    group: models
+
+  - title: SBMLutils (Python)
+    description: Python utilities for manipulation and annotation of SBML models; a major source of inspiration for the SBML PBK Utils package.
+    url: https://github.com/matthiaskoenig/sbmlutils
+    group: generic
+
+  - title: libSBML (Python)
+    description: Official Python bindings for libSBML providing core functionality to create, manipulate, annotate, validate, and read/write SBML models.
+    url: https://github.com/sbmlteam/python-libsbml
+    group: generic

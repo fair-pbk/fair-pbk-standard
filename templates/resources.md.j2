@@ -1,0 +1,18 @@
+---
+hide:
+  - navigation
+---
+
+The following resources provide the building blocks of the FAIR PBK standard.
+
+{% for group in groups %}
+## {{ group.title }}
+
+{{ group.description }}
+
+| Resource | Description |
+|---|---|
+{% for resource in group.resources -%}
+| [{{ resource.title }}]({{ resource.url }}) | {{ resource.description }} |
+{% endfor %}
+{% endfor %}

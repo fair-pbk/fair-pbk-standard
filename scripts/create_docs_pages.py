@@ -53,6 +53,28 @@ def create_fip_page():
 
     print(f"✅ Markdown file generated: {output_file}")
 
+def create_resources_page():
+    with open("specification/resources.yaml", "r") as f:
+        data = yaml.safe_load(f)
+
+    groups_map = {g["id"]: {**g, "resources": []} for g in data["resource_groups"]}
+
+    for r in data["resources"]:
+        gid = r["group"]
+        groups_map[gid]["resources"].append(r)
+
+    env = Environment(loader=FileSystemLoader("."))
+    template = env.get_template("templates/resources.md.j2")
+
+    output_md = template.render(groups=list(groups_map.values()))
+
+    output_file = "docs/resources.md"
+    with open(output_file, "w") as f:
+        f.write(output_md)
+
+    print(f"✅ Markdown file generated: {output_file}")
+
 if __name__ == '__main__':
     create_specifications_page()
     create_fip_page()
+    create_resources_page()

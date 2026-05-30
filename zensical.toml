@@ -17,16 +17,17 @@ nav = [
   {"Home" = "index.md"},
   {"Specification" = "specification.md"},
   {"Use in FIP" = "fip.md"},
-  {"Resources" = "resources.md"},
-  {"About" = "about.md"},
+  {"Resources" = "resources.md"}
 ]
 
 [project.theme]
 name = "material"
 language = "en"
+palette.primary = "green"
 features = [
     "toc.integrate",
     "navigation.tabs"
 ]
 [project.theme.font]
 text = "Roboto"
+
