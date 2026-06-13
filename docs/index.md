@@ -38,3 +38,9 @@ While focusing on **interoperability and reusability**, the FAIR PBK standard co
 - **[Use in FIP](fip.md)**: Illustration of the use of the standard in a FAIR implementation profile (FIP)
 - **[Resources](resources.md)**: Tools, examples, and references
 - **[About](about.md)**: Background and contributors
+
+## Reference
+
+For more extensive information, please refer to the article below:
+
+> Kruisselbrink, J., Minnema, J., Deepika, D., Kumar, S., Sharma, S., Gastellu, T., Vogs, C., Westerhout, J., Karakoltzidis, A., Tollefsen, K.E., Zwartsen, A., Palm, M., van Klaveren, J., Ratier, A., Kumar, V., & Engel, J. (2026). An exchange standard for FAIR PBK models in chemical risk assessment - A PARC community effort. *Computational Toxicology*, 0, 100426. [https://doi.org/10.1016/j.comtox.2026.100426](https://doi.org/10.1016/j.comtox.2026.100426)
