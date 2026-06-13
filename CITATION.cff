@@ -1,0 +1,87 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated publication."
+title: "FAIR PBK Standard"
+authors:
+  - family-names: Kruisselbrink
+    given-names: Johannes
+    orcid: "https://orcid.org/0000-0003-1673-5725"
+  - family-names: Minnema
+    given-names: Jordi
+    orcid: "https://orcid.org/0000-0002-1847-4218"
+  - family-names: Deepika
+    given-names: Deepika
+  - family-names: Kumar
+    given-names: Saurav
+  - family-names: Sharma
+    given-names: Shubh
+  - family-names: Gastellu
+    given-names: Thomas
+  - family-names: Vogs
+    given-names: Carolina
+  - family-names: Westerhout
+    given-names: Joost
+  - family-names: Karakoltzidis
+    given-names: Achilleas
+  - family-names: Tollefsen
+    given-names: Knut Erik
+  - family-names: Zwartsen
+    given-names: Anne
+  - family-names: Palm
+    given-names: Margriet
+  - family-names: van Klaveren
+    given-names: Jacob
+  - family-names: Ratier
+    given-names: Aude
+  - family-names: Kumar
+    given-names: Vikas
+  - family-names: Engel
+    given-names: Jasper
+    orcid: "https://orcid.org/0000-0001-6087-1711"
+type: software
+license: "MIT"
+
+preferred-citation:
+  type: article
+  title: "An exchange standard for FAIR PBK models in chemical risk assessment - A PARC community effort"
+  authors:
+    - family-names: Kruisselbrink
+      given-names: Johannes
+      orcid: "https://orcid.org/0000-0003-1673-5725"
+    - family-names: Minnema
+      given-names: Jordi
+      orcid: "https://orcid.org/0000-0002-1847-4218"
+    - family-names: Deepika
+      given-names: Deepika
+    - family-names: Kumar
+      given-names: Saurav
+    - family-names: Sharma
+      given-names: Shubh
+    - family-names: Gastellu
+      given-names: Thomas
+    - family-names: Vogs
+      given-names: Carolina
+    - family-names: Westerhout
+      given-names: Joost
+    - family-names: Karakoltzidis
+      given-names: Achilleas
+    - family-names: Tollefsen
+      given-names: Knut Erik
+    - family-names: Zwartsen
+      given-names: Anne
+    - family-names: Palm
+      given-names: Margriet
+    - family-names: van Klaveren
+      given-names: Jacob
+    - family-names: Ratier
+      given-names: Aude
+    - family-names: Kumar
+      given-names: Vikas
+    - family-names: Engel
+      given-names: Jasper
+      orcid: "https://orcid.org/0000-0001-6087-1711"
+  journal: "Computational Toxicology"
+  year: 2026
+  volume: 0
+  pages: "100426"
+  doi: "10.1016/j.comtox.2026.100426"
+  url: "https://www.sciencedirect.com/science/article/pii/S2468111326000277"
