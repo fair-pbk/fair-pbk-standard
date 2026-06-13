@@ -35,7 +35,7 @@ Open source PBK models that are developed to comply with the FAIR PBK standard.
 | Resource | Description |
 |---|---|
 | [EuroMix PBK re-implementation](https://github.com/rivm-syso/euromix-to-sbml/) | FAIR PBK re-implementation of the EuroMix PBK model in Antimony. |
-| [PFAS PBK model](https://github.com/rivm-syso/pfasPBK) | Antimony implementation of PFAS PBK kinetics based on Loccisano et al. (2011) with subsequent modifications by Westerhout et al. (2024). |
+| [PFAS PBK model](https://github.com/rivm-syso/pfasPBK) | Antimony implementation of PFAS PBK kinetics based on the model presented by Westerhout et al. (2024). |
 | [FAIR PBK Demonstration models](https://github.com/rivm-syso/pbk-demo-models) | Collection of small Antimony PBK example models illustrating different modelling choices and translations to PBK implementations. |
 
 

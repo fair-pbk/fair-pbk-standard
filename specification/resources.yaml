@@ -52,7 +52,7 @@ resources:
     group: models
 
   - title: PFAS PBK model
-    description: Antimony implementation of PFAS PBK kinetics based on Loccisano et al. (2011) with subsequent modifications by Westerhout et al. (2024).
+    description: Antimony implementation of PFAS PBK kinetics based on the model presented by Westerhout et al. (2024).
     url: https://github.com/rivm-syso/pfasPBK
     group: models
 
