@@ -13,6 +13,8 @@ The standard prescribes the use of [Systems Biology Markup Language (SBML)](http
 
 ## Built on established resources
 
+The FAIR PBK standard builds on the the following resources:
+
 - **[SBML](https://sbml.org/)**: Core markup language for biological models
 - **[PBPKO Ontology](https://insilicovida-research-lab.github.io/pbpko/)**: Domain-specific annotations for PBK model elements
 - **[ChEBI](https://www.ebi.ac.uk/chebi)**: Chemical identifiers and ontology
@@ -26,16 +28,9 @@ The standard applies to **PBK model implementations**, being the structural repr
 
 The standard recognizes that PBK model developers use diverse tools and languages. Rather than replacing existing practices, it provides a **consistent framework** for publishing models, making them easier to find, interpret, and reuse.
 
-The standard is designed to support the workflow presented below, enabling a connection between model developers and users:
-
-- **Model developers** create models using their preferred software, then convert to annotated FAIR PBK standard for publication.
-
-- **Model users** discover interoperable models through repositories and integrate them into their own environments.
+The standard is designed to support a workflow in which model developers create models using their preferred software, then convert to annotated FAIR PBK standard for publication, and Model users discover interoperable models through repositories and integrate them into their own environments.
 
 While focusing on **interoperability and reusability**, the FAIR PBK standard complements broader [FAIR principles](https://www.go-fair.org/fair-principles/). It can be integrated into comprehensive FAIR specifications or implementation profiles (see [Use in FIP](fip.md)).
-
-
-![FAIR PBK Workflow](FAIR_PBK_workflow.png)
 
 ## Get Started
 
