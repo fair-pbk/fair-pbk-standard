@@ -12,7 +12,7 @@ The following resources provide the building blocks of the FAIR PBK standard.
 
 | Resource | Description |
 |---|---|
-{% for resource in group.resources -%}
+{% for resource in group.resources|sort(attribute="title") -%}
 | [{{ resource.title }}]({{ resource.url }}) | {{ resource.description }} |
 {% endfor %}
 {% endfor %}
