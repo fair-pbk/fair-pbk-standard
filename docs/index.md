@@ -33,7 +33,6 @@ While focusing on **interoperability and reusability**, the FAIR PBK standard co
 - **[Full specification](specification.md)**: Complete rules and guidelines
 - **[Use in FIP](fip.md)**: Illustration of the use of the standard in a FAIR implementation profile (FIP)
 - **[Resources](resources.md)**: Tools, examples, and references
-- **[About](about.md)**: Background and contributors
 
 ## Reference
 
