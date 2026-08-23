@@ -34,6 +34,15 @@ While focusing on **interoperability and reusability**, the FAIR PBK standard co
 - **[Use in FIP](fip.md)**: Illustration of the use of the standard in a FAIR implementation profile (FIP)
 - **[Resources](resources.md)**: Tools, examples, and references
 
+## Contributing
+
+Contributions to both the standard and its documentation are welcome! There are several ways you can support the project:
+
+- **Star the repository** - Help increase the project's visibility and reach more people by starring the [repository](https://github.com/fair-pbk/fair-pbk-standard).
+- **Open issues and join discussions** - Help shape the standard by reporting issues, proposing improvements, or contributing feedback and ideas to existing issues in the project's [issue tracker](https://github.com/fair-pbk/fair-pbk-standard/issues).
+- **Develop and publish models compliant with the standard** - Use the standard to develop FAIR PBK models and share them in the [resources page](https://fair-pbk.github.io/fair-pbk-standard/resources/).
+- **Develop tools and software supporting the standard** - Build and contribute to tools, software, and integrations that enable the creation, validation, exchange, and use of PBK models compliant with the standard, and share them on the [resources page](https://fair-pbk.github.io/fair-pbk-standard/resources/).
+
 ## Reference
 
 For more extensive information, please refer to the article below:
